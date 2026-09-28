@@ -1,0 +1,195 @@
+/* Soporte Audiocast. Tokens de app/DESIGN.md de Audiocast: tema oscuro único, px fijos, sin clamp() ni vw. */
+:root {
+  --bg: #101418;
+  --surface: #161c22;
+  --surface-2: #1c242d;
+  --border: #262f38;
+  --ink: #e8edf2;
+  --muted: #9aa7b2;
+  --brand: #56c1d8;
+  --ok: #3fd68b;
+  --degraded: #fb8c3e;
+  --crit: #e63946;
+  --crit-ink: #ff8a93;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+h1 { margin: 0; font-size: 24px; line-height: 1.25; font-weight: 600; }
+h2 { margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+h3 { margin: 16px 0 4px; font-size: 13px; font-weight: 600; color: var(--muted); }
+h3:first-of-type { margin-top: 0; }
+p { margin: 0 0 8px; }
+
+.secundario { color: var(--muted); }
+.dato { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; font-size: 13px; }
+
+/* Barra */
+.barra {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.marca { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 600; }
+.marca:hover { text-decoration: none; }
+.marca-punto { width: 10px; height: 10px; border-radius: 50%; background: var(--brand); }
+.salir { display: flex; align-items: center; gap: 12px; margin: 0; }
+.quien { color: var(--muted); font-size: 13px; }
+
+.contenido { max-width: 1040px; margin: 0 auto; padding: 24px 24px 64px; }
+
+/* Botones y campos */
+.boton, .boton-suave {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font: inherit; font-weight: 600;
+  cursor: pointer;
+}
+.boton { background: var(--brand); color: #06222a; }
+.boton:hover { background: #7ad3e6; }
+.boton-suave { background: transparent; border-color: var(--border); color: var(--ink); font-weight: 400; }
+.boton-suave:hover { background: var(--surface-2); text-decoration: none; }
+
+label { display: block; margin: 16px 0 6px; font-size: 13px; color: var(--muted); }
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+
+/* Entrada y mensajes */
+.entrada {
+  max-width: 360px; margin: 56px auto 0; padding: 24px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+}
+.entrada h1 { margin-bottom: 8px; }
+.entrada .boton { width: 100%; margin-top: 24px; }
+.aviso { padding: 10px 12px; border-radius: 6px; font-size: 14px; }
+.aviso-error {
+  color: var(--crit-ink);
+  background: color-mix(in srgb, var(--crit) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--crit) 45%, transparent);
+}
+
+/* Cabecera de la lista y del caso */
+.cabecera { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin-bottom: 20px; }
+.cabecera p { margin: 0; }
+.cabecera-caso { display: block; }
+.cabecera-caso p { margin: 4px 0 12px; }
+.filtros { margin-left: auto; display: flex; gap: 4px; }
+.filtros a { padding: 6px 12px; border-radius: 6px; color: var(--muted); border: 1px solid transparent; }
+.filtros a:hover { background: var(--surface-2); text-decoration: none; }
+.filtros a[aria-current="page"] { color: var(--ink); background: var(--surface); border-color: var(--border); }
+.volver { margin-bottom: 16px; font-size: 14px; }
+
+/* Lista de casos: filas, no tarjetas */
+.casos { list-style: none; margin: 0; padding: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+.caso + .caso { border-top: 1px solid var(--border); }
+.caso { background: var(--surface); border-left: 3px solid transparent; }
+.caso-urgente { border-left-color: var(--crit); }
+.caso-enlace {
+  display: grid; grid-template-columns: 120px minmax(0, 1fr) auto; gap: 16px;
+  padding: 14px 16px;
+  color: inherit;
+}
+.caso-enlace:hover { background: var(--surface-2); text-decoration: none; }
+.caso-cuando { display: flex; flex-direction: column; gap: 2px; font-size: 13px; }
+.caso-titulo { margin: 0 0 2px; }
+.caso-titulo .secundario { margin-left: 6px; font-size: 13px; }
+.caso-resumen { margin: 0; overflow-wrap: anywhere; }
+.caso-equipo { margin: 4px 0 0; font-size: 13px; }
+.caso-marcas { display: flex; flex-wrap: wrap; align-content: flex-start; justify-content: flex-end; gap: 6px; max-width: 260px; }
+.cabecera-caso .caso-marcas { justify-content: flex-start; max-width: none; }
+
+/* Marca de estado: texto + tinte, nunca el color solo */
+.marca-estado {
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 12px; line-height: 18px; white-space: nowrap;
+}
+.marca-urgente {
+  color: var(--crit-ink); font-weight: 600;
+  background: color-mix(in srgb, var(--crit) 12%, transparent);
+  border-color: color-mix(in srgb, var(--crit) 45%, transparent);
+}
+.marca-tecnico {
+  color: var(--degraded);
+  background: color-mix(in srgb, var(--degraded) 12%, transparent);
+  border-color: color-mix(in srgb, var(--degraded) 45%, transparent);
+}
+.marca-resuelto {
+  color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 12%, transparent);
+  border-color: color-mix(in srgb, var(--ok) 45%, transparent);
+}
+
+.vacio { padding: 48px 24px; text-align: center; border: 1px dashed var(--border); border-radius: 8px; }
+.vacio p { max-width: 460px; margin: 0 auto 8px; }
+.mas { margin-top: 16px; text-align: center; }
+
+/* Caso */
+.dos-columnas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+.panel { margin-bottom: 16px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+.resumen { margin-bottom: 16px; font-size: 16px; }
+.ficha { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 6px 16px; margin: 0; }
+.ficha dt { color: var(--muted); font-size: 13px; line-height: 22px; }
+.ficha dd { margin: 0; overflow-wrap: anywhere; }
+.equipo { padding-left: 12px; border-left: 3px solid var(--ok); }
+.equipo-urgente { border-left-color: var(--crit); }
+
+details { margin-top: 16px; }
+summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.crudo {
+  margin: 8px 0 0; padding: 12px; max-height: 320px; overflow: auto;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.consultas { margin: 0; padding: 0; list-style: none; }
+.consultas li { display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 6px 0; }
+.consultas li + li { border-top: 1px solid var(--border); }
+
+.transcripcion { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.turno { max-width: 78%; padding: 10px 14px; border-radius: 8px; background: var(--surface-2); }
+.turno p { margin: 0; overflow-wrap: anywhere; }
+.turno-asistente { align-self: flex-start; }
+.turno-persona { align-self: flex-end; background: color-mix(in srgb, var(--brand) 14%, var(--surface)); }
+.turno-quien { display: block; margin-bottom: 2px; font-size: 12px; color: var(--muted); }
+.pie { margin-top: 24px; font-size: 13px; overflow-wrap: anywhere; }
+
+@media (max-width: 720px) {
+  .barra { padding: 12px 16px; }
+  .contenido { padding: 16px 16px 48px; }
+  .caso-enlace { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .caso-cuando { flex-direction: row; gap: 8px; }
+  .caso-marcas { justify-content: flex-start; max-width: none; }
+  .dos-columnas { grid-template-columns: minmax(0, 1fr); }
+  .ficha { grid-template-columns: 130px minmax(0, 1fr); }
+  .turno { max-width: 92%; }
+  .filtros { margin-left: 0; width: 100%; }
+}

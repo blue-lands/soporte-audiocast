@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block titulo %}{{ caso.tienda_nombre or caso.tienda or "Caso" }} · Soporte Audiocast{% endblock %}
+{% block contenido %}
+<p class="volver"><a href="{{ base }}/">← Casos</a></p>
+
+<div class="cabecera cabecera-caso">
+  <h1>{{ caso.tienda_nombre or caso.tienda or "Tienda sin identificar" }}</h1>
+  <p class="secundario">
+    {% if caso.tienda_comuna %}{{ caso.tienda_comuna }}, {{ caso.tienda_region }} · {% endif %}
+    {{ caso.inicio | fecha_hora }} · {{ caso.canal | canal }} · {{ caso.duracion_s | duracion }}
+  </p>
+  <div class="caso-marcas">
+    {% if caso.urgente %}<span class="marca-estado marca-urgente">Urgente</span>{% endif %}
+    {% if caso.problema %}<span class="marca-estado">{{ caso.problema | problema }}</span>{% endif %}
+    {% if caso.requiere_tecnico %}<span class="marca-estado marca-tecnico">Requiere técnico</span>{% endif %}
+    {% if caso.resuelto_en_llamada %}<span class="marca-estado marca-resuelto">Resuelto en la llamada</span>{% endif %}
+  </div>
+</div>
+
+<div class="dos-columnas">
+  <section class="panel">
+    <h2>Ficha</h2>
+    {% if caso.resumen %}<p class="resumen">{{ caso.resumen }}</p>{% endif %}
+    <dl class="ficha">
+      <dt>Motivo</dt><dd>{{ caso.motivo or "—" }}</dd>
+      <dt>Problema</dt><dd>{{ caso.problema | problema }}</dd>
+      <dt>Desde cuándo</dt><dd>{{ caso.desde_cuando or "—" }}</dd>
+      <dt>Quién llamó</dt><dd>{{ caso.nombre_contacto or "—" }}</dd>
+      <dt>Tienda que dijo</dt><dd>{{ caso.tienda or "—" }}</dd>
+      {% if caso.telefono %}<dt>Teléfono</dt><dd class="dato">{{ caso.telefono }}</dd>{% endif %}
+      <dt>Urgente</dt><dd>{{ caso.urgencia | si_no }}</dd>
+      <dt>Resuelto en la llamada</dt><dd>{{ caso.resuelto_en_llamada | si_no }}</dd>
+      <dt>Requiere técnico</dt><dd>{{ caso.requiere_tecnico | si_no }}</dd>
+    </dl>
+  </section>
+
+  <section class="panel">
+    <h2>Equipo de la tienda</h2>
+    <h3>Durante la llamada{% if caso.equipo_momento %} <span class="secundario">{{ caso.equipo_momento | fecha_hora }}</span>{% endif %}</h3>
+    {% if caso.equipo_frase %}
+    <p class="equipo{% if caso.equipo_urgente %} equipo-urgente{% endif %}">{{ caso.equipo_frase }}</p>
+    {% else %}
+    <p class="secundario">La asistente no consultó el equipo en esta conversación.</p>
+    {% endif %}
+    <h3>Ahora</h3>
+    {% if equipo_ahora %}
+    <p class="equipo{% if equipo_ahora.urgente %} equipo-urgente{% endif %}">{{ equipo_ahora.frase }}</p>
+    {% if equipo_ahora.volumen %}<p class="secundario">{{ equipo_ahora.volumen }}</p>{% endif %}
+    {% if equipo_ahora.senal %}<p class="secundario">{{ equipo_ahora.senal }}</p>{% endif %}
+    {% else %}
+    <p class="secundario">El caso no quedó asociado a una tienda del directorio.</p>
+    {% endif %}
+    {% if caso.equipo_caja %}
+    <details>
+      <summary>Datos del equipo durante la llamada</summary>
+      <pre class="crudo">{{ caso.equipo_caja | json_legible }}</pre>
+    </details>
+    {% endif %}
+  </section>
+</div>
+
+{% if consultas %}
+<section class="panel">
+  <h2>Lo que consultó la asistente</h2>
+  <ol class="consultas">
+    {% for c in consultas %}
+    <li>
+      <span class="dato">{{ c.momento | hora }}</span>
+      <span>Buscó «{{ c.dicho }}»:</span>
+      {% if c.resultado == "una" %}<span>{{ c.frase }}</span>
+      {% elif c.resultado == "varias" %}<span class="secundario">había varias tiendas que calzaban; preguntó cuál.</span>
+      {% else %}<span class="secundario">no encontró la tienda.</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+<section class="panel">
+  <h2>Transcripción</h2>
+  {% set turnos = caso.transcripcion | turnos %}
+  {% if turnos %}
+  <ol class="transcripcion">
+    {% for turno in turnos %}
+    <li class="turno turno-{{ 'asistente' if turno.rol == 'asistente' else 'persona' }}">
+      <span class="turno-quien">{{ "Asistente" if turno.rol == "asistente" else "Persona" }}
+        {% if turno.segundo is not none %}<span class="dato secundario">{{ turno.segundo | minuto }}</span>{% endif %}</span>
+      <p>{{ turno.mensaje }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="secundario">La conversación no tiene transcripción.</p>
+  {% endif %}
+</section>
+
+<p class="pie secundario">Conversación <span class="dato">{{ caso.conversation_id }}</span>
+  {% if caso.motivo_corte %} · terminó: {{ caso.motivo_corte }}{% endif %}</p>
+{% endblock %}

@@ -1,0 +1,30 @@
+# Se instala en /etc/systemd/system/soporte-audiocast.service (con el OK de hrm: el VPS es producción compartida).
+[Unit]
+Description=Soporte Audiocast: asistente telefónica y panel de casos (127.0.0.1:8392)
+After=network.target
+
+[Service]
+# Usuario desechable, como los servicios de la central: sin useradd.
+DynamicUser=yes
+User=soporte-audiocast
+WorkingDirectory=/var/www/soporte-audiocast
+# systemd lee el .env como root (permisos 600) y pasa las variables a la app.
+EnvironmentFile=/var/www/soporte-audiocast/.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+# Crea /var/lib/soporte-audiocast (enlace a /var/lib/private/… por DynamicUser): ahí vive la base.
+StateDirectory=soporte-audiocast
+StateDirectoryMode=0700
+# Sin access log: las URLs del panel pueden llevar nombres o búsquedas.
+ExecStart=/var/www/soporte-audiocast/.venv/bin/uvicorn --factory app.principal:crear_app --host 127.0.0.1 --port 8392 --no-server-header --no-access-log
+Restart=on-failure
+RestartSec=5
+# VPS compartido con SpotyFlow (producción) y 1,9 GB de RAM: si la app se pasa, que caiga ella.
+MemoryMax=150M
+NoNewPrivileges=yes
+ProtectHome=yes
+PrivateTmp=yes
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

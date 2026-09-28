@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block titulo %}Casos · Soporte Audiocast{% endblock %}
+{% block contenido %}
+<div class="cabecera">
+  <h1>Casos</h1>
+  <p class="secundario">
+    {{ cuenta.total }} {{ "caso" if cuenta.total == 1 else "casos" }}{% if cuenta.urgentes %},
+    {{ cuenta.urgentes }} {{ "urgente" if cuenta.urgentes == 1 else "urgentes" }}{% endif %}
+  </p>
+  <nav class="filtros" aria-label="Filtro">
+    <a href="{{ base }}/" {% if not urgentes %}aria-current="page"{% endif %}>Todos</a>
+    <a href="{{ base }}/?urgentes=1" {% if urgentes %}aria-current="page"{% endif %}>Urgentes</a>
+  </nav>
+</div>
+
+{% if casos %}
+<ul class="casos">
+  {% for caso in casos %}
+  <li class="caso{% if caso.urgente %} caso-urgente{% endif %}">
+    <a class="caso-enlace" href="{{ base }}/casos/{{ caso.conversation_id }}">
+      <div class="caso-cuando">
+        <span class="dato">{{ caso.inicio | fecha_hora }}</span>
+        <span class="secundario">{{ caso.canal | canal }}</span>
+      </div>
+      <div class="caso-que">
+        <p class="caso-titulo">
+          <strong>{{ caso.tienda_nombre or caso.tienda or "Tienda sin identificar" }}</strong>
+          {% if caso.tienda_comuna and caso.tienda_comuna != caso.tienda_nombre %}
+          <span class="secundario">{{ caso.tienda_comuna }}</span>
+          {% endif %}
+        </p>
+        <p class="caso-resumen">{{ caso.motivo or caso.resumen or "Sin resumen." }}</p>
+        {% if caso.equipo_frase %}<p class="caso-equipo secundario">Equipo: {{ caso.equipo_frase }}</p>{% endif %}
+      </div>
+      <div class="caso-marcas">
+        {% if caso.urgente %}<span class="marca-estado marca-urgente">Urgente</span>{% endif %}
+        {% if caso.problema %}<span class="marca-estado">{{ caso.problema | problema }}</span>{% endif %}
+        {% if caso.requiere_tecnico %}<span class="marca-estado marca-tecnico">Requiere técnico</span>{% endif %}
+        {% if caso.resuelto_en_llamada %}<span class="marca-estado marca-resuelto">Resuelto en la llamada</span>{% endif %}
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% if siguiente_antes %}
+<p class="mas"><a class="boton-suave" href="{{ base }}/?antes={{ siguiente_antes }}{% if urgentes %}&amp;urgentes=1{% endif %}">Casos anteriores</a></p>
+{% endif %}
+{% else %}
+<section class="vacio">
+  {% if urgentes %}
+  <p>No hay casos urgentes.</p>
+  <p class="secundario"><a href="{{ base }}/">Ver todos los casos</a></p>
+  {% elif pagina_siguiente %}
+  <p>No hay casos más antiguos.</p>
+  <p class="secundario"><a href="{{ base }}/">Volver al principio</a></p>
+  {% else %}
+  <p>Todavía no hay casos.</p>
+  <p class="secundario">Cada conversación que termina la asistente aparece aquí con su ficha, el estado del equipo y la
+    transcripción.</p>
+  {% endif %}
+</section>
+{% endif %}
+{% endblock %}

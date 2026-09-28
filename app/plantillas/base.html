@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+{% block cabeza %}{% endblock %}
+<title>{% block titulo %}Soporte Audiocast{% endblock %}</title>
+<link rel="stylesheet" href="{{ base }}/estaticos/estilo.css">
+</head>
+<body>
+<header class="barra">
+  <a class="marca" href="{{ base }}/"><span class="marca-punto" aria-hidden="true"></span>Soporte Audiocast</a>
+  <nav class="salir">
+    {% if sesion %}<span class="quien">{{ sesion.usuario }}</span>{% endif %}
+    <a class="boton-suave" href="{{ central }}">Central de flota</a>
+  </nav>
+</header>
+<main class="contenido">
+{% block contenido %}{% endblock %}
+</main>
+</body>
+</html>
