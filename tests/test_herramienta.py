@@ -43,6 +43,16 @@ def test_encuentra_la_tienda_y_dice_como_esta(cliente):
     assert salida["estado_del_equipo"] == "Su equipo está funcionando normal."
     assert salida["urgente"] is False
     assert "caja" not in salida
+    assert salida["direccion"] == "Nataniel Cox 620"
+    assert salida["direccion_para_decir"] == "Nataniel Cox seiscientos veinte"
+    assert "direccion_para_decir" in salida["indicacion"]
+
+
+def test_tienda_sin_direccion_confirma_solo_con_nombre_y_comuna(cliente):
+    salida = cliente.post(RUTA, json={"tienda": "piedra roja"}, headers=CON_TOKEN).json()
+    assert salida["resultado"] == "encontrada"
+    assert "direccion" not in salida and "direccion_para_decir" not in salida
+    assert "dirección" not in salida["indicacion"]
 
 
 def test_varias_y_despues_la_elegida(cliente):

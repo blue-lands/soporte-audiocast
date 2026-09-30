@@ -3,7 +3,7 @@
 import sqlite3
 from datetime import datetime
 
-from . import central, directorio, estado
+from . import central, directorio, estado, palabras
 from .config import Config
 
 SIN_REVISAR = "No pude revisar su equipo en este momento."
@@ -59,6 +59,10 @@ def para_la_asistente(respuesta: dict) -> dict:
     tienda, est = respuesta["tienda"], respuesta["estado"]
     salida = {"resultado": "encontrada", "tienda_id": tienda["id"], "tienda": tienda["nombre"], "comuna": tienda["comuna"],
               "estado_del_equipo": est["frase"]}
+    if tienda.get("direccion"):
+        # Las dos formas: la escrita para WhatsApp; la de palabras para la voz, que no lee cifras.
+        salida["direccion"] = tienda["direccion"]
+        salida["direccion_para_decir"] = palabras.para_decir(tienda["direccion"])
     if est["urgente"] is not None:
         salida["urgente"] = est["urgente"]
     if est["volumen"]:
@@ -67,6 +71,9 @@ def para_la_asistente(respuesta: dict) -> dict:
         salida["senal_de_celular"] = est["senal"]
     salida["indicacion"] = ("Diga el estado del equipo con esas palabras. El volumen y la señal, solo si la persona "
                             "pregunta o si tienen que ver con su problema.")
+    if "direccion" in salida:
+        salida["indicacion"] = ("Al confirmar la tienda, diga también su dirección: en una llamada, con las palabras de "
+                                "direccion_para_decir; por escrito, como viene en direccion. " + salida["indicacion"])
     return salida
 
 

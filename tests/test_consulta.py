@@ -12,7 +12,7 @@ def test_una_tienda_con_su_estado_y_la_caja_cruda(con, config):
     respuesta = consulta.consultar_tienda(con, config, "la de nataniel", ahora=AHORA)
     assert respuesta["resultado"] == "una"
     assert respuesta["tienda"] == {"id": "nataniel-cox", "nombre": "Nataniel Cox", "comuna": "Santiago Centro",
-                                   "region": "Región Metropolitana"}
+                                   "region": "Región Metropolitana", "direccion": "Nataniel Cox 620"}
     assert respuesta["estado"]["frase"] == "Su equipo está funcionando normal."  # local first: fallback es lo sano
     assert respuesta["caja"]["unit_id"] == "minipc-lab-01"
     assert respuesta["central_disponible"] is True

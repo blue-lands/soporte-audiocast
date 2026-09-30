@@ -29,7 +29,8 @@ class Tienda:
     alias: str = ""
 
     def como_dict(self) -> dict:
-        return {"id": self.id, "nombre": self.nombre, "comuna": self.comuna, "region": self.region}
+        return {"id": self.id, "nombre": self.nombre, "comuna": self.comuna, "region": self.region,
+                "direccion": fuente.DIRECCIONES.get(self.id, "")}
 
 
 @dataclass(frozen=True)
