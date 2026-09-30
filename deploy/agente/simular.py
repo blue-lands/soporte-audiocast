@@ -80,8 +80,12 @@ def pedir(metodo, ruta, cuerpo=None, timeout=180):
 def simular(agente, nombre):
     esc = ESCENARIOS[nombre]
     cuerpo = {"simulation_specification": {
-        "simulated_user_config": {"first_message": esc["primera"], "language": "es",
+        "simulated_user_config": {"language": "es",
                                   "prompt": {"prompt": esc["persona"], "temperature": 0.7}},
+        # La llamada arranca igual siempre: saludo de la asistente + la primera frase exacta de la persona.
+        "partial_conversation_history": [
+            {"role": "agent", "message": "Aló, soporte Audiocast, ¿en qué le puedo ayudar?", "time_in_call_secs": 0},
+            {"role": "user", "message": esc["primera"], "time_in_call_secs": 3}],
         "tool_mock_config": {"consultar_tienda": {"default_return_value": json.dumps(esc["respuesta"],
                                                                                      ensure_ascii=False)}},
         # Las que el agente espera de una llamada real; fijo que no es celular (+569): no promete WhatsApp.
@@ -104,8 +108,8 @@ def medir(esc, turnos):
         if nombrada is not None and consulta is None and turno.get("role") == "agent":
             if any(llamada.get("tool_name") == "consultar_tienda" for llamada in turno.get("tool_calls") or []):
                 consulta = i
-            elif "?" in texto:
-                preguntas_antes += 1
+            elif "?" in texto and any(p in texto for p in ("tienda", "comuna", "local", "sucursal", "dónde")):
+                preguntas_antes += 1   # dudó sobre la tienda; preguntar el nombre de la persona lo pide el prompt
     dijo = " ".join((t.get("message") or "").lower() for t in turnos[(consulta or 0):] if t.get("role") == "agent")
     return {"consulta_directa": nombrada is not None and consulta is not None and preguntas_antes == 0,
             "consulto": consulta is not None, "preguntas_antes": preguntas_antes,
