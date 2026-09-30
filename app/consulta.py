@@ -72,9 +72,8 @@ def para_la_asistente(respuesta: dict) -> dict:
     salida["indicacion"] = ("Diga el estado del equipo con esas palabras. El volumen y la señal, solo si la persona "
                             "pregunta o si tienen que ver con su problema.")
     if "direccion" in salida:
-        salida["indicacion"] = ("Antes de decir el estado, confirme que es la tienda correcta diciendo su dirección y "
-                                "preguntando si es ese su local: en una llamada, con las palabras de direccion_para_decir; "
-                                "por escrito, como viene en direccion. " + salida["indicacion"])
+        salida["indicacion"] = ("Al confirmar la tienda, diga también su dirección: en una llamada, con las palabras de "
+                                "direccion_para_decir; por escrito, como viene en direccion. " + salida["indicacion"])
     return salida
 
 
