@@ -248,7 +248,8 @@ Stack de Asiste: FastAPI + SQLite + Jinja, un servicio systemd (`deploy/soporte-
 
 - ~~Token `soporte` de la central y rol de solo lectura~~ — hechos 2026-09-30 (`readers.soporte` en
   `/etc/audiocast-central/tokens.json`); la app ya lee la central.
-- **Plan del simulador**: `pausa` (todas "aún no activadas"); hrm decidió el 2026-09-30 dejarlo así. Antes: decisión de
+- **Plan del simulador**: `operativa` desde 2026-09-30 (todas sonando; hrm: "en las pruebas el equipo tiene que estar
+  operativo"). Antes corría `pausa` (todas "aún no activadas"). Antes: decisión de
   hrm; lo ejecuta la instancia de MediaFlow.
 - **Avisos por Telegram**: la guía propone el bot de alertas de la central. Su credencial está en
   `/etc/audiocast-central/telegram_bot_token`; no se leyó. Las entrega hrm (o un bot propio) y van en
