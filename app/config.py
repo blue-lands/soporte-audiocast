@@ -16,7 +16,7 @@ class Config:
     central_timeout_s: float = 2.0
     central_cache_s: float = 10.0
     # Cajas que la app no ve nunca, aunque la central las entregue (la piloto).
-    cajas_ocultas: tuple[str, ...] = ("nataniel-cox-01",)
+    cajas_ocultas: tuple[str, ...] = ()
     zona_horaria: str = "America/Santiago"
     # Panel.
     hosts: tuple[str, ...] = ("127.0.0.1", "localhost", "testserver")
@@ -61,7 +61,7 @@ def cargar() -> Config:
         central_archivo=os.environ.get("CENTRAL_ARCHIVO", "").strip(),
         central_timeout_s=float(os.environ.get("CENTRAL_TIMEOUT_S", "2")),
         central_cache_s=float(os.environ.get("CENTRAL_CACHE_S", "10")),
-        cajas_ocultas=_lista("SOPORTE_CAJAS_OCULTAS", "nataniel-cox-01"),
+        cajas_ocultas=_lista("SOPORTE_CAJAS_OCULTAS", ""),
         zona_horaria=os.environ.get("SOPORTE_ZONA_HORARIA", "America/Santiago"),
         hosts=_lista("SOPORTE_HOSTS", "127.0.0.1,localhost"),
         central_galleta=os.environ.get("CENTRAL_GALLETA", "ac_session").strip(),

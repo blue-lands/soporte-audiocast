@@ -30,7 +30,10 @@ Guías de origen (con credenciales; viven fuera de git, **no copiarlas aquí**):
 - **El VPS es producción compartida** (SpotyFlow, Asiste, Remates). No tocar PM2, nginx ni nada fuera de esta carpeta sin
   el OK de hrm. Pedir confirmación antes de instalar, reiniciar o detener cualquier servicio, incluido el propio.
 - **No leer ni copiar nada de Asiste** salvo como referencia (`/var/www/secretaria` es solo lectura).
-- La piloto `nataniel-cox-01` **no se muestra ni se menciona** (`SOPORTE_CAJAS_OCULTAS`).
+- La piloto `nataniel-cox-01` **sí se muestra y se menciona** desde 2026-09-30 (hrm): es la caja de Nataniel Cox.
+  `SOPORTE_CAJAS_OCULTAS` queda vacío (el mecanismo sigue por si hace falta).
+- **Qué caja es de qué tienda lo dice la central** (`site.tienda`, `central/tiendas.py` de audiocast-player). Aquí no
+  se asigna; `directorio.asociar()` solo adivina por comuna si una caja no trae `site.tienda`.
 - El cliente es **Tóttus** (con tilde en todo lo que lea la voz). No nombrar otras marcas.
 - Nada de acciones sobre las cajas durante la llamada: es una etapa posterior.
 - La asistente recibe **frases**, no campos: la traducción se hace en `app/estado.py`, no en el prompt.

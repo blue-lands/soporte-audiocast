@@ -97,8 +97,8 @@ REGION_CORTA = {
     "Región del Biobío": "VIII",
 }
 
-# Tiendas con caja real (decisión de hrm, guía §0.3): un caso del demo es verdadero.
-CAJAS_REALES = {"nataniel-cox": "minipc-lab-01"}
+# Qué caja es de qué tienda (real o simulada) lo dice la central en `site.tienda` (central/tiendas.py de
+# audiocast-player, 2026-09-30). Aquí ya no se asigna: antes CAJAS_REALES ponía minipc-lab-01, caja del ejemplo.
 
 # Comunas que la central nombra distinto.
 COMUNA_EN_CENTRAL = {"Santiago Centro": "Santiago"}

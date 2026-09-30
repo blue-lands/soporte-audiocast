@@ -40,8 +40,9 @@ def test_encuentra_la_tienda_y_dice_como_esta(cliente):
     assert salida["resultado"] == "encontrada"
     assert (salida["tienda_id"], salida["tienda"], salida["comuna"]) == ("nataniel-cox", "Nataniel Cox",
                                                                            "Santiago Centro")
-    assert salida["estado_del_equipo"] == "Su equipo está funcionando normal."
-    assert salida["urgente"] is False
+    # La piloto, desenchufada (se puede mencionar desde 2026-09-30).
+    assert salida["estado_del_equipo"].startswith("No tenemos señal de su equipo")
+    assert salida["urgente"] is True
     assert "caja" not in salida
     assert salida["direccion"] == "Nataniel Cox 620"
     assert salida["direccion_para_decir"] == "Nataniel Cox seiscientos veinte"
@@ -91,7 +92,7 @@ def test_cada_consulta_queda_anotada_con_la_caja_cruda(cliente, con):
     assert [(c["dicho"], c["resultado"], c["tienda_id"]) for c in anotadas] == [("talca", "varias", None),
                                                                                ("talca", "una", "talca")]
     assert anotadas[0]["caja"] is None
-    assert json.loads(anotadas[1]["caja"])["site_id"] == "talca-45"
+    assert json.loads(anotadas[1]["caja"])["site_id"] == "talca"
     assert json.loads(anotadas[1]["respuesta"])["estado_del_equipo"] == anotadas[1]["frase"]
 
 

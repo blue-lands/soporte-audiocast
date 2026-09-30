@@ -26,8 +26,8 @@ def llega_un_caso(cliente, conversation_id="conv_1", consultar: str | None = "re
 def test_salud(cliente):
     respuesta = cliente.get("/salud")
     assert respuesta.status_code == 200
-    assert respuesta.json() == {"ok": True, "tiendas": 71, "tiendas_con_caja": 70, "central": "archivo",
-                                "central_disponible": True, "cajas_en_central": 71, "herramienta": True,
+    assert respuesta.json() == {"ok": True, "tiendas": 71, "tiendas_con_caja": 71, "central": "archivo",
+                                "central_disponible": True, "cajas_en_central": 73, "herramienta": True,
                                 "webhook": True, "avisos": False}
 
 
@@ -171,7 +171,7 @@ def test_caso(panel):
     pagina = panel.get("/casos/conv_1").text
     for texto in ("Recoleta", "Región Metropolitana", "Llamada", "1 min 35 s", "Marcela Soto", "+56911112222",
                   "desde las diez de la mañana", "Durante la llamada", "No tenemos señal de su equipo", "Ahora",
-                  "Buscó «recoleta»", "Aló, soporte Audiocast", "estamos sin música", "recoleta-07", "conv_1"):
+                  "Buscó «recoleta»", "Aló, soporte Audiocast", "estamos sin música", "conv_1"):
         assert texto in pagina, texto
 
 
@@ -199,9 +199,10 @@ def test_lo_que_dijo_la_persona_no_se_ejecuta(panel):
         assert "&lt;script&gt;" in pagina
 
 
-def test_el_panel_nunca_muestra_la_piloto(panel):
+def test_el_panel_muestra_la_caja_de_nataniel_cox(panel):
+    # Hasta 2026-09-30 la piloto se ocultaba; hrm decidió que se puede mostrar y mencionar.
     llega_un_caso(panel, "conv_1", consultar="la de nataniel", tienda="Nataniel Cox")
-    assert "nataniel-cox-01" not in panel.get("/casos/conv_1").text
+    assert "nataniel-cox-01" in panel.get("/casos/conv_1").text
 
 
 # ---- avisos ---------------------------------------------------------------------------------------------------------------

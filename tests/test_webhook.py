@@ -108,7 +108,7 @@ def test_la_tienda_del_caso_es_la_que_consulto_la_asistente(cliente, con):
     caso = casos.leer(con, "conv_2")
     assert caso["tienda_id"] == "talca-colin"
     assert caso["equipo_frase"] == "Su equipo está funcionando y conectado."
-    assert json.loads(caso["equipo_caja"])["site_id"] == "linares-47"
+    assert json.loads(caso["equipo_caja"])["site_id"] == "talca-colin"
     assert caso["urgente"] == 0
 
 
@@ -120,8 +120,8 @@ def test_sin_consulta_y_con_una_tienda_dudosa_el_caso_queda_sin_tienda(cliente, 
 
 def test_urgente_por_la_ficha_o_por_el_equipo(cliente, con):
     token = {"X-Soporte-Token": TOKEN_HERRAMIENTA}
-    # El equipo de Recoleta no da señal: urgente aunque la ficha diga que no.
-    cliente.post("/herramientas/consultar_tienda", json={"tienda": "recoleta", "conversation_id": "a"}, headers=token)
+    # El equipo de Vitacura no da señal: urgente aunque la ficha diga que no.
+    cliente.post("/herramientas/consultar_tienda", json={"tienda": "vitacura", "conversation_id": "a"}, headers=token)
     enviar(cliente, conversacion("a", ficha={"urgencia": False}))
     enviar(cliente, conversacion("b", ficha={"tienda": "Providencia", "urgencia": True}))
     enviar(cliente, conversacion("c", ficha={"tienda": "Providencia", "urgencia": False}))

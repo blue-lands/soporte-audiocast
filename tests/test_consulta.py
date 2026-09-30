@@ -13,8 +13,9 @@ def test_una_tienda_con_su_estado_y_la_caja_cruda(con, config):
     assert respuesta["resultado"] == "una"
     assert respuesta["tienda"] == {"id": "nataniel-cox", "nombre": "Nataniel Cox", "comuna": "Santiago Centro",
                                    "region": "Región Metropolitana", "direccion": "Nataniel Cox 620"}
-    assert respuesta["estado"]["frase"] == "Su equipo está funcionando normal."  # local first: fallback es lo sano
-    assert respuesta["caja"]["unit_id"] == "minipc-lab-01"
+    # La piloto, asignada a Nataniel Cox en la central y desenchufada (hrm 2026-09-30: se puede mencionar).
+    assert respuesta["estado"]["frase"].startswith("No tenemos señal de su equipo desde hace 9 días")
+    assert respuesta["caja"]["unit_id"] == "96adc18211af42c1ba49ef5c0574da54"
     assert respuesta["central_disponible"] is True
 
 
@@ -22,8 +23,8 @@ def test_los_tres_casos_del_guion_con_el_plan_mixto(con, config):
     def frase(tienda):
         return consulta.consultar_tienda(con, config, tienda, ahora=AHORA)["estado"]["frase"]
     assert frase("providencia") == "Su equipo está funcionando y conectado."
-    assert frase("maipú").startswith("Su equipo perdió la conexión hace")
-    assert frase("recoleta").startswith("No tenemos señal de su equipo desde las")
+    assert frase("buin").startswith("Su equipo perdió la conexión hace")
+    assert frase("vitacura").startswith("No tenemos señal de su equipo desde las")
 
 
 def test_varias_y_ninguna_no_consultan_el_equipo(con, config):
@@ -45,6 +46,9 @@ def test_un_tienda_id_inventado_cae_en_la_busqueda_por_texto(con, config):
 
 
 def test_tienda_sin_caja(con, config):
+    # Hoy las 71 tienen caja en la central; se le quita a una para probar el caso.
+    con.execute("UPDATE tiendas SET unit_id = NULL, site_id = NULL WHERE id = 'san-vicente'")
+    con.commit()
     respuesta = consulta.consultar_tienda(con, config, "san vicente")
     assert respuesta["estado"]["frase"] == "No tengo registrado un equipo en esa tienda."
     assert respuesta["caja"] is None
@@ -91,8 +95,10 @@ def test_a_la_asistente_varias_le_llegan_con_su_tienda_id(con, config):
 
 
 def test_a_la_asistente_la_senal_debil_y_lo_urgente(con, config):
-    salida = consulta.para_la_asistente(consulta.consultar_tienda(con, config, "recoleta", ahora=AHORA))
+    salida = consulta.para_la_asistente(consulta.consultar_tienda(con, config, "vitacura", ahora=AHORA))
     assert salida["urgente"] is True
     assert "senal_de_celular" not in salida  # sin latido: la señal es del último latido, no de ahora
+    con.execute("UPDATE tiendas SET unit_id = NULL, site_id = NULL WHERE id = 'san-vicente'")
+    con.commit()
     sin_caja = consulta.para_la_asistente(consulta.consultar_tienda(con, config, "san vicente"))
     assert "urgente" not in sin_caja

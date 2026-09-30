@@ -2,622 +2,39 @@
  "generated_at": 1790565192.1482623,
  "units": [
   {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -87.0,
-     "rsrq_db": -8.8,
-     "snr_db": 14.0,
-     "quality_pct": 65,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
+   "audio": {
+    "rms_dbfs": -19.8,
+    "silent": false
    },
+   "forced_fallback": false,
    "volume": {
     "mpv_pct": 70,
     "hw_pct": 80,
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-26-84ea32",
-   "site_id": "alto-hospicio-26",
-   "site": {
-    "local": "Av. Balmaceda 3287",
-    "comuna": "Alto Hospicio",
-    "region": "I",
-    "short_id": "AC-27"
-   },
-   "boot_id": "boot-f152fcb2",
-   "run_id": "run-4e693838",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "69eb5ce9",
+   "unit_id": "ea4162f64b014c2fac77305255dad08c",
+   "site_id": "Beta",
+   "mode": "local_first",
+   "source": "local",
    "state": "FALLBACK",
-   "state_since": "2026-09-28T02:25:48Z",
-   "time_in_fallback_s": 2844,
-   "audio": {
-    "rms_dbfs": -21.2,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 10167,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": false,
-    "reachable": false
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
+   "state_since": "2026-09-27T03:19:52Z",
+   "time_in_fallback_s": 86000,
+   "ts": "2026-09-28T03:13:06Z",
+   "stream_s_24h": 0,
+   "seconds_since": 6.0,
    "expected_interval_s": 10.0,
    "offline": false,
    "silent_streak": 0,
-   "fallback_s_24h": 2844
+   "fallback_s_24h": 86000
   },
   {
    "net": {
     "lte": {
-     "rsrp_dbm": -89.1,
-     "rsrq_db": -8.9,
-     "snr_db": 13.3,
-     "quality_pct": 61,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-66-335713",
-   "site_id": "ancud-66",
-   "site": {
-    "local": "Calle Prat 4850",
-    "comuna": "Ancud",
-    "region": "X",
-    "short_id": "AC-67"
-   },
-   "boot_id": "boot-9ab4ea33",
-   "run_id": "run-a75c96bc",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "587364c5",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:25:04Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -24.2,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 9299,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -83.9,
-     "rsrq_db": -8.5,
-     "snr_db": 15.0,
-     "quality_pct": 72,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-57-21404c",
-   "site_id": "angol-57",
-   "site": {
-    "local": "Av. O'Higgins 606",
-    "comuna": "Angol",
-    "region": "IX",
-    "short_id": "AC-58"
-   },
-   "boot_id": "boot-4e2dd9bd",
-   "run_id": "run-83311962",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "2c5dcce1",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:21:21Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -26.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 32649,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -93.0,
-     "rsrq_db": -9.2,
-     "snr_db": 12.0,
-     "quality_pct": 54,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-27-743fae",
-   "site_id": "antofagasta-27",
-   "site": {
-    "local": "Calle Baquedano 980",
-    "comuna": "Antofagasta",
-    "region": "II",
-    "short_id": "AC-28"
-   },
-   "boot_id": "boot-1747a9b4",
-   "run_id": "run-9dd42a9f",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "804cb41d",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:53:29Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -18.0,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 14314,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -107.5,
-     "rsrq_db": -10.5,
-     "snr_db": 7.2,
-     "quality_pct": 25,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-24-905ca8",
-   "site_id": "arica-24",
-   "site": {
-    "local": "Av. O'Higgins 1651",
-    "comuna": "Arica",
-    "region": "XV",
-    "short_id": "AC-25"
-   },
-   "boot_id": "boot-8115bdbd",
-   "run_id": "run-af4526fe",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "ba4bd8bd",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:44:02Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -14.1,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 18842,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -77.1,
-     "rsrq_db": -7.9,
-     "snr_db": 17.3,
-     "quality_pct": 85,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-20-9aaf0d",
-   "site_id": "buin-20",
-   "site": {
-    "local": "Calle Condell 2662",
-    "comuna": "Buin",
-    "region": "RM",
-    "short_id": "AC-21"
-   },
-   "boot_id": "boot-7a2325f0",
-   "run_id": "run-e316ed48",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "73075e01",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:17:29Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -22.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 34184,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -92.1,
-     "rsrq_db": -9.2,
-     "snr_db": 12.3,
-     "quality_pct": 55,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-28-fe6435",
-   "site_id": "calama-28",
-   "site": {
-    "local": "Av. O'Higgins 1285",
-    "comuna": "Calama",
-    "region": "II",
-    "short_id": "AC-29"
-   },
-   "boot_id": "boot-9c6fd96f",
-   "run_id": "run-37631656",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "ecab4577",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:51:46Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -24.1,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 5786,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -100.4,
-     "rsrq_db": -9.9,
-     "snr_db": 9.5,
-     "quality_pct": 39,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-65-1a1130",
-   "site_id": "castro-65",
-   "site": {
-    "local": "Av. España 1396",
-    "comuna": "Castro",
-    "region": "X",
-    "short_id": "AC-66"
-   },
-   "boot_id": "boot-69581e38",
-   "run_id": "run-d2456580",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "66d7b0ba",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:29:54Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -35.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 6123,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -106.7,
-     "rsrq_db": -10.4,
-     "snr_db": 7.4,
-     "quality_pct": 26,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-49-b20a17",
-   "site_id": "cauquenes-49",
-   "site": {
-    "local": "Av. Vicuña Mackenna 1312",
-    "comuna": "Cauquenes",
-    "region": "VII",
-    "short_id": "AC-50"
-   },
-   "boot_id": "boot-473acb5f",
-   "run_id": "run-ba2f3bf7",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "9b43bc5d",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:13:14Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -24.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 16615,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -78.5,
-     "rsrq_db": -8.0,
-     "snr_db": 16.8,
-     "quality_pct": 83,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-50-19bde2",
-   "site_id": "chillán-50",
-   "site": {
-    "local": "Av. Alemania 2838",
-    "comuna": "Chillán",
-    "region": "XVI",
-    "short_id": "AC-51"
-   },
-   "boot_id": "boot-42f2249e",
-   "run_id": "run-e0db78f1",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "a1576b3d",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:45:40Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -34.1,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 25078,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -100.3,
-     "rsrq_db": -9.9,
-     "snr_db": 9.6,
-     "quality_pct": 39,
+     "rsrp_dbm": -75.0,
+     "rsrq_db": -7.7,
+     "snr_db": 18.0,
+     "quality_pct": 90,
      "operator": "wom",
      "tech": "lte",
      "state": "connected"
@@ -629,24 +46,25 @@
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-19-3adb67",
-   "site_id": "colina-19",
+   "unit_id": "sim-02-166740",
+   "site_id": "alameda",
    "site": {
-    "local": "Av. Colón 2140",
-    "comuna": "Colina",
+    "local": "Avenida Libertador Bernardo O'Higgins 3470",
+    "comuna": "Estación Central",
     "region": "RM",
-    "short_id": "AC-20"
+    "short_id": "AC-04",
+    "tienda": "alameda"
    },
-   "boot_id": "boot-64a92720",
-   "run_id": "run-f056a87a",
-   "ts": "2026-09-28T03:13:12Z",
+   "boot_id": "boot-c38b53e3",
+   "run_id": "run-4dbe1b1d",
+   "ts": "2026-09-30T18:25:01Z",
    "app_version": "0.1.0",
-   "config_version": "4e40285b",
+   "config_version": "c5ec2ebe",
    "state": "STREAMING",
-   "state_since": "2026-09-28T02:33:50Z",
+   "state_since": "2026-09-30T16:47:34Z",
    "time_in_fallback_s": 0,
    "audio": {
-    "rms_dbfs": -32.5,
+    "rms_dbfs": -30.0,
     "silent": false
    },
    "dac": {
@@ -655,14 +73,14 @@
    },
    "mpv": {
     "responsive": true,
-    "time_pos": 31997,
-    "restarts_24h": 1
+    "time_pos": 26195,
+    "restarts_24h": 2
    },
    "stream": {
     "transport_ok": true,
     "reachable": true
    },
-   "last_restart_reason": null,
+   "last_restart_reason": "source_switch",
    "transitions": [],
    "command_results": [],
    "forced_fallback": false,
@@ -675,71 +93,10 @@
   {
    "net": {
     "lte": {
-     "rsrp_dbm": -82.7,
-     "rsrq_db": -8.4,
-     "snr_db": 15.4,
-     "quality_pct": 74,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-51-2dd35f",
-   "site_id": "concepción-51",
-   "site": {
-    "local": "Av. Matta 392",
-    "comuna": "Concepción",
-    "region": "VIII",
-    "short_id": "AC-52"
-   },
-   "boot_id": "boot-c0c3560d",
-   "run_id": "run-d896c975",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "078d6bc9",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:55:13Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -33.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 10912,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -108.2,
-     "rsrq_db": -10.5,
-     "snr_db": 6.9,
-     "quality_pct": 23,
+     "rsrp_dbm": -104.4,
+     "rsrq_db": -10.2,
+     "snr_db": 8.2,
+     "quality_pct": 31,
      "operator": "movistar",
      "tech": "lte",
      "state": "connected"
@@ -751,24 +108,25 @@
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-48-07b220",
-   "site_id": "constitución-48",
+   "unit_id": "sim-36-a734c1",
+   "site_id": "antofagasta-centro",
    "site": {
-    "local": "Calle Prat 595",
-    "comuna": "Constitución",
-    "region": "VII",
-    "short_id": "AC-49"
+    "local": "Capitán Carlos Condell 2639",
+    "comuna": "Antofagasta",
+    "region": "II",
+    "short_id": "AC-38",
+    "tienda": "antofagasta-centro"
    },
-   "boot_id": "boot-840e1fda",
-   "run_id": "run-327446b8",
-   "ts": "2026-09-28T03:13:12Z",
+   "boot_id": "boot-f549bc52",
+   "run_id": "run-f5887a97",
+   "ts": "2026-09-30T18:25:01Z",
    "app_version": "0.1.0",
-   "config_version": "144c27cf",
+   "config_version": "d97ad166",
    "state": "STREAMING",
-   "state_since": "2026-09-28T03:02:37Z",
+   "state_since": "2026-09-30T17:02:59Z",
    "time_in_fallback_s": 0,
    "audio": {
-    "rms_dbfs": -26.4,
+    "rms_dbfs": -24.8,
     "silent": false
    },
    "dac": {
@@ -777,14 +135,76 @@
    },
    "mpv": {
     "responsive": true,
-    "time_pos": 30106,
+    "time_pos": 32040,
     "restarts_24h": 1
    },
    "stream": {
     "transport_ok": true,
     "reachable": true
    },
-   "last_restart_reason": null,
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -87.5,
+     "rsrq_db": -8.8,
+     "snr_db": 13.8,
+     "quality_pct": 65,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-37-1a1dd8",
+   "site_id": "antofagasta-mall",
+   "site": {
+    "local": "Avenida Balmaceda 2355",
+    "comuna": "Antofagasta",
+    "region": "II",
+    "short_id": "AC-39",
+    "tienda": "antofagasta-mall"
+   },
+   "boot_id": "boot-e6db4460",
+   "run_id": "run-27abdc21",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "68cf7079",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:07:08Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -33.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 22719,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
    "transitions": [],
    "command_results": [],
    "forced_fallback": false,
@@ -812,21 +232,22 @@
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-30-7a9c4f",
-   "site_id": "copiapó-30",
+   "unit_id": "sim-35-7c9d78",
+   "site_id": "antofagasta-norte",
    "site": {
-    "local": "Av. Libertad 2093",
-    "comuna": "Copiapó",
-    "region": "III",
-    "short_id": "AC-31"
+    "local": "Pedro Aguirre Cerda 10578",
+    "comuna": "Antofagasta",
+    "region": "II",
+    "short_id": "AC-37",
+    "tienda": "antofagasta-norte"
    },
    "boot_id": "boot-910d6dd2",
    "run_id": "run-f479aa47",
-   "ts": "2026-09-28T03:13:12Z",
+   "ts": "2026-09-30T18:25:01Z",
    "app_version": "0.1.0",
    "config_version": "79f310cf",
    "state": "STREAMING",
-   "state_since": "2026-09-28T02:14:49Z",
+   "state_since": "2026-09-30T17:26:38Z",
    "time_in_fallback_s": 0,
    "audio": {
     "rms_dbfs": -32.1,
@@ -858,2216 +279,6 @@
   {
    "net": {
     "lte": {
-     "rsrp_dbm": -90.9,
-     "rsrq_db": -9.1,
-     "snr_db": 12.7,
-     "quality_pct": 58,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-33-33d91d",
-   "site_id": "coquimbo-33",
-   "site": {
-    "local": "Av. Vicuña Mackenna 1496",
-    "comuna": "Coquimbo",
-    "region": "IV",
-    "short_id": "AC-34"
-   },
-   "boot_id": "boot-69c2e6c5",
-   "run_id": "run-d1d74ab1",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "8e589f8b",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:35:18Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -27.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 23367,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -103.6,
-     "rsrq_db": -10.1,
-     "snr_db": 8.5,
-     "quality_pct": 32,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-54-320b9f",
-   "site_id": "coronel-54",
-   "site": {
-    "local": "Calle Condell 3577",
-    "comuna": "Coronel",
-    "region": "VIII",
-    "short_id": "AC-55"
-   },
-   "boot_id": "boot-49fa863c",
-   "run_id": "run-b14e800f",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "0852ab86",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T03:11:02Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -19.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 2450,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -110.7,
-     "rsrq_db": -10.7,
-     "snr_db": 6.1,
-     "quality_pct": 18,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-67-70079c",
-   "site_id": "coyhaique-67",
-   "site": {
-    "local": "Calle Bulnes 174",
-    "comuna": "Coyhaique",
-    "region": "XI",
-    "short_id": "AC-68"
-   },
-   "boot_id": "boot-73afe990",
-   "run_id": "run-8315f16b",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "b7f5f616",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:37:53Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -16.0,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 32315,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -77.7,
-     "rsrq_db": -8.0,
-     "snr_db": 17.1,
-     "quality_pct": 84,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-46-dbbfed",
-   "site_id": "curicó-46",
-   "site": {
-    "local": "Calle Lastarria 3278",
-    "comuna": "Curicó",
-    "region": "VII",
-    "short_id": "AC-47"
-   },
-   "boot_id": "boot-aa3f6aba",
-   "run_id": "run-92e37655",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "29ba30ba",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:58:37Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -24.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 31518,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -92.5,
-     "rsrq_db": -9.2,
-     "snr_db": 12.2,
-     "quality_pct": 54,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-16-0d640e",
-   "site_id": "estación-central-16",
-   "site": {
-    "local": "Av. O'Higgins 3832",
-    "comuna": "Estación Central",
-    "region": "RM",
-    "short_id": "AC-17"
-   },
-   "boot_id": "boot-4f536079",
-   "run_id": "run-b4564ba1",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "e77ea0f0",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:22:33Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -21.2,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 13318,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -110.1,
-     "rsrq_db": -10.7,
-     "snr_db": 6.3,
-     "quality_pct": 19,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-23-9ab4a7",
-   "site_id": "huechuraba-23",
-   "site": {
-    "local": "Av. Matta 627",
-    "comuna": "Huechuraba",
-    "region": "RM",
-    "short_id": "AC-24"
-   },
-   "boot_id": "boot-7195068b",
-   "run_id": "run-826b2c09",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "ae5de3a0",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T03:05:49Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -27.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 2627,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -106.2,
-     "rsrq_db": -10.4,
-     "snr_db": 7.6,
-     "quality_pct": 27,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-35-11fcc6",
-   "site_id": "illapel-35",
-   "site": {
-    "local": "Av. Libertad 159",
-    "comuna": "Illapel",
-    "region": "IV",
-    "short_id": "AC-36"
-   },
-   "boot_id": "boot-6a9fd15c",
-   "run_id": "run-84e9a2d5",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "4051f7ef",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:41:54Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -30.5,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 13627,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -87.1,
-     "rsrq_db": -8.8,
-     "snr_db": 14.0,
-     "quality_pct": 65,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-08-01b803",
-   "site_id": "independencia-08",
-   "site": {
-    "local": "Calle Lastarria 113",
-    "comuna": "Independencia",
-    "region": "RM",
-    "short_id": "AC-09"
-   },
-   "boot_id": "boot-3fab105e",
-   "run_id": "run-adc011da",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "e073feda",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:36:05Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -15.2,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 24524,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -95.8,
-     "rsrq_db": -9.5,
-     "snr_db": 11.1,
-     "quality_pct": 48,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-25-691a02",
-   "site_id": "iquique-25",
-   "site": {
-    "local": "Av. Matta 1115",
-    "comuna": "Iquique",
-    "region": "I",
-    "short_id": "AC-26"
-   },
-   "boot_id": "boot-31f6e90e",
-   "run_id": "run-e50c9f7c",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "d8128a16",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:22:28Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -35.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 26719,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -99.9,
-     "rsrq_db": -9.8,
-     "snr_db": 9.7,
-     "quality_pct": 40,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-22-b57036",
-   "site_id": "la-cisterna-22",
-   "site": {
-    "local": "Calle Prat 1616",
-    "comuna": "La Cisterna",
-    "region": "RM",
-    "short_id": "AC-23"
-   },
-   "boot_id": "boot-791df745",
-   "run_id": "run-76924cb2",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "455882d1",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:28:15Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -35.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 38296,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -111.2,
-     "rsrq_db": -10.8,
-     "snr_db": 5.9,
-     "quality_pct": 17,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-04-115385",
-   "site_id": "la-florida-04",
-   "site": {
-    "local": "Calle Freire 1192",
-    "comuna": "La Florida",
-    "region": "RM",
-    "short_id": "AC-05"
-   },
-   "boot_id": "boot-4abfc6dc",
-   "run_id": "run-411b2d40",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "ed32117c",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:20:20Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -33.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 23089,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -96.2,
-     "rsrq_db": -9.5,
-     "snr_db": 10.9,
-     "quality_pct": 47,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-12-a7a050",
-   "site_id": "la-reina-12",
-   "site": {
-    "local": "Calle Baquedano 3870",
-    "comuna": "La Reina",
-    "region": "RM",
-    "short_id": "AC-13"
-   },
-   "boot_id": "boot-9ff8c76c",
-   "run_id": "run-21116c73",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "99e4432f",
-   "state": "FALLBACK",
-   "state_since": "2026-09-28T01:49:53Z",
-   "time_in_fallback_s": 4999,
-   "audio": {
-    "rms_dbfs": -28.4,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 1147,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": false,
-    "reachable": false
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 4999
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -86.3,
-     "rsrq_db": -8.7,
-     "snr_db": 14.2,
-     "quality_pct": 67,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-32-35f7e7",
-   "site_id": "la-serena-32",
-   "site": {
-    "local": "Av. Libertad 4490",
-    "comuna": "La Serena",
-    "region": "IV",
-    "short_id": "AC-33"
-   },
-   "boot_id": "boot-27abdc21",
-   "run_id": "run-c0f479f5",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "b009c241",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:19:17Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -27.1,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 2323,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -78.2,
-     "rsrq_db": -8.0,
-     "snr_db": 16.9,
-     "quality_pct": 83,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-61-232c99",
-   "site_id": "la-unión-61",
-   "site": {
-    "local": "Av. Vicuña Mackenna 4054",
-    "comuna": "La Unión",
-    "region": "XIV",
-    "short_id": "AC-62"
-   },
-   "boot_id": "boot-d23aa979",
-   "run_id": "run-1d6fde60",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "43042237",
-   "state": "FALLBACK",
-   "state_since": "2026-09-28T02:25:26Z",
-   "time_in_fallback_s": 2866,
-   "audio": {
-    "rms_dbfs": -21.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 9075,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": false,
-    "reachable": false
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 2866
-  },
-  {
-   "audio": {
-    "rms_dbfs": -19.8,
-    "silent": false
-   },
-   "forced_fallback": false,
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "minipc-lab-01",
-   "site_id": "lab-01",
-   "mode": "local_first",
-   "source": "local",
-   "state": "FALLBACK",
-   "state_since": "2026-09-27T03:19:52Z",
-   "time_in_fallback_s": 86000,
-   "ts": "2026-09-28T03:13:06Z",
-   "stream_s_24h": 0,
-   "seconds_since": 6.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 86000
-  },
-  {
-   "audio": {
-    "rms_dbfs": -19.8,
-    "silent": false
-   },
-   "forced_fallback": false,
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "x98h-lab-02",
-   "site_id": "lab-02",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:49:52Z",
-   "time_in_fallback_s": 0,
-   "ts": "2026-09-28T03:13:04Z",
-   "seconds_since": 8.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -102.9,
-     "rsrq_db": -10.1,
-     "snr_db": 8.7,
-     "quality_pct": 34,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-01-560603",
-   "site_id": "las-condes-01",
-   "site": {
-    "local": "Calle Bulnes 1940",
-    "comuna": "Las Condes",
-    "region": "RM",
-    "short_id": "AC-02"
-   },
-   "boot_id": "boot-27468d31",
-   "run_id": "run-a274a741",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "4463e541",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:10:51Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -22.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 5213,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -96.8,
-     "rsrq_db": -9.6,
-     "snr_db": 10.7,
-     "quality_pct": 46,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-59-873d77",
-   "site_id": "lautaro-59",
-   "site": {
-    "local": "Av. España 444",
-    "comuna": "Lautaro",
-    "region": "IX",
-    "short_id": "AC-60"
-   },
-   "boot_id": "boot-321c2873",
-   "run_id": "run-fb74afb7",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "fda9654c",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:45:32Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -21.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 38110,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -87.1,
-     "rsrq_db": -8.8,
-     "snr_db": 14.0,
-     "quality_pct": 65,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-47-5bcc24",
-   "site_id": "linares-47",
-   "site": {
-    "local": "Calle Prat 4370",
-    "comuna": "Linares",
-    "region": "VII",
-    "short_id": "AC-48"
-   },
-   "boot_id": "boot-e1c196d2",
-   "run_id": "run-790a98c7",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "a5523dfd",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:44:36Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -19.0,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 2857,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -82.6,
-     "rsrq_db": -8.4,
-     "snr_db": 15.5,
-     "quality_pct": 74,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-14-77bd22",
-   "site_id": "lo-barnechea-14",
-   "site": {
-    "local": "Av. Portales 1148",
-    "comuna": "Lo Barnechea",
-    "region": "RM",
-    "short_id": "AC-15"
-   },
-   "boot_id": "boot-d0aec9b3",
-   "run_id": "run-6741ab2b",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "2c047264",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:28:22Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -26.4,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 6514,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -73.7,
-     "rsrq_db": -7.6,
-     "snr_db": 18.4,
-     "quality_pct": 92,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-41-6003ac",
-   "site_id": "los-andes-41",
-   "site": {
-    "local": "Av. Colón 1810",
-    "comuna": "Los Andes",
-    "region": "V",
-    "short_id": "AC-42"
-   },
-   "boot_id": "boot-15d1d1cd",
-   "run_id": "run-b3097496",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "25bb2d47",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:53:56Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -19.4,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 19109,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -97.3,
-     "rsrq_db": -9.6,
-     "snr_db": 10.6,
-     "quality_pct": 45,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-53-aa137e",
-   "site_id": "los-ángeles-53",
-   "site": {
-    "local": "Av. Balmaceda 2176",
-    "comuna": "Los Ángeles",
-    "region": "VIII",
-    "short_id": "AC-54"
-   },
-   "boot_id": "boot-f5ec09cb",
-   "run_id": "run-b31e26c1",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "dbbce407",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:51:48Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -26.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 34818,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -111.5,
-     "rsrq_db": -10.8,
-     "snr_db": 5.8,
-     "quality_pct": 17,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-10-7eee21",
-   "site_id": "macul-10",
-   "site": {
-    "local": "Av. Balmaceda 1151",
-    "comuna": "Macul",
-    "region": "RM",
-    "short_id": "AC-11"
-   },
-   "boot_id": "boot-87daa196",
-   "run_id": "run-8ef93cc8",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "5865a9e9",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:48:42Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -33.5,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 5570,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -77.0,
-     "rsrq_db": -7.9,
-     "snr_db": 17.3,
-     "quality_pct": 85,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-03-2dbc2d",
-   "site_id": "maipú-03",
-   "site": {
-    "local": "Calle Lastarria 4528",
-    "comuna": "Maipú",
-    "region": "RM",
-    "short_id": "AC-04"
-   },
-   "boot_id": "boot-9526844c",
-   "run_id": "run-dd62707d",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "c80dc6dc",
-   "state": "FALLBACK",
-   "state_since": "2026-09-28T03:04:17Z",
-   "time_in_fallback_s": 535,
-   "audio": {
-    "rms_dbfs": -24.5,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 21985,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": false,
-    "reachable": false
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 535
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -94.0,
-     "rsrq_db": -9.3,
-     "snr_db": 11.7,
-     "quality_pct": 52,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-18-19bd30",
-   "site_id": "melipilla-18",
-   "site": {
-    "local": "Calle Freire 3635",
-    "comuna": "Melipilla",
-    "region": "RM",
-    "short_id": "AC-19"
-   },
-   "boot_id": "boot-774cf16e",
-   "run_id": "run-fddbe4d9",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "83804d7c",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:44:12Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -15.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 11726,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "audio": {
-    "rms_dbfs": -19.8,
-    "silent": false
-   },
-   "forced_fallback": false,
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "nataniel-cox-01",
-   "site_id": "nataniel-cox",
-   "state": "STREAMING",
-   "state_since": "2026-09-17T17:13:12Z",
-   "time_in_fallback_s": 0,
-   "ts": "2026-09-18T20:59:52Z",
-   "seconds_since": 800000.0,
-   "expected_interval_s": 10.0,
-   "offline": true,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -76.5,
-     "rsrq_db": -7.9,
-     "snr_db": 17.5,
-     "quality_pct": 87,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-62-93df96",
-   "site_id": "osorno-62",
-   "site": {
-    "local": "Av. Alemania 1770",
-    "comuna": "Osorno",
-    "region": "X",
-    "short_id": "AC-63"
-   },
-   "boot_id": "boot-3a54bb47",
-   "run_id": "run-3593df7c",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "fcd7e01b",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:23:14Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -33.2,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 7203,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -86.6,
-     "rsrq_db": -8.7,
-     "snr_db": 14.1,
-     "quality_pct": 66,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-34-87481d",
-   "site_id": "ovalle-34",
-   "site": {
-    "local": "Calle Condell 3269",
-    "comuna": "Ovalle",
-    "region": "IV",
-    "short_id": "AC-35"
-   },
-   "boot_id": "boot-62da560b",
-   "run_id": "run-c8e6e060",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "c46b74a7",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:34:31Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -27.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 10367,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -75.3,
-     "rsrq_db": -7.8,
-     "snr_db": 17.9,
-     "quality_pct": 89,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-11-f241ec",
-   "site_id": "peñalolén-11",
-   "site": {
-    "local": "Av. Balmaceda 4626",
-    "comuna": "Peñalolén",
-    "region": "RM",
-    "short_id": "AC-12"
-   },
-   "boot_id": "boot-dbbcfdd6",
-   "run_id": "run-95c4166b",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "df4c2e89",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:16:00Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -34.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 30776,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -77.7,
-     "rsrq_db": -8.0,
-     "snr_db": 17.1,
-     "quality_pct": 84,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-44-013729",
-   "site_id": "pichilemu-44",
-   "site": {
-    "local": "Calle Bulnes 438",
-    "comuna": "Pichilemu",
-    "region": "VI",
-    "short_id": "AC-45"
-   },
-   "boot_id": "boot-2e7da584",
-   "run_id": "run-552e6820",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "3bbd1e77",
-   "state": "FALLBACK",
-   "state_since": "2026-09-28T01:19:07Z",
-   "time_in_fallback_s": 6845,
-   "audio": {
-    "rms_dbfs": -32.4,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 7616,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": false,
-    "reachable": false
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 6845
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -103.5,
-     "rsrq_db": -10.1,
-     "snr_db": 8.5,
-     "quality_pct": 33,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-00-0b555f",
-   "site_id": "providencia-00",
-   "site": {
-    "local": "Av. Portales 3189",
-    "comuna": "Providencia",
-    "region": "RM",
-    "short_id": "AC-01"
-   },
-   "boot_id": "boot-6fcd2e55",
-   "run_id": "run-bf2b91cd",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "4e757848",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:43:07Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -27.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 22354,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -104.8,
-     "rsrq_db": -10.2,
-     "snr_db": 8.1,
-     "quality_pct": 30,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-21-b702c2",
-   "site_id": "pudahuel-21",
-   "site": {
-    "local": "Av. Vicuña Mackenna 2590",
-    "comuna": "Pudahuel",
-    "region": "RM",
-    "short_id": "AC-22"
-   },
-   "boot_id": "boot-38306d84",
-   "run_id": "run-1dc01307",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "7a99f98e",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:59:32Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -25.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 24694,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -78.6,
-     "rsrq_db": -8.1,
-     "snr_db": 16.8,
-     "quality_pct": 82,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 100,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-05-a31471",
-   "site_id": "puente-alto-05",
-   "site": {
-    "local": "Av. Alemania 2662",
-    "comuna": "Puente Alto",
-    "region": "RM",
-    "short_id": "AC-06"
-   },
-   "boot_id": "boot-e5d8374e",
-   "run_id": "run-acba8a80",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "78f3f7ff",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:57:18Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -35.1,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 21803,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -90.5,
-     "rsrq_db": -9.0,
-     "snr_db": 12.8,
-     "quality_pct": 59,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-63-d4d3e0",
-   "site_id": "puerto-montt-63",
-   "site": {
-    "local": "Av. España 3025",
-    "comuna": "Puerto Montt",
-    "region": "X",
-    "short_id": "AC-64"
-   },
-   "boot_id": "boot-0b269250",
-   "run_id": "run-838bebc3",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "103cce4e",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:59:24Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -23.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 35752,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -99.9,
-     "rsrq_db": -9.8,
-     "snr_db": 9.7,
-     "quality_pct": 40,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-64-0b099d",
-   "site_id": "puerto-varas-64",
-   "site": {
-    "local": "Av. Portales 2124",
-    "comuna": "Puerto Varas",
-    "region": "X",
-    "short_id": "AC-65"
-   },
-   "boot_id": "boot-e3f166a4",
-   "run_id": "run-798d254d",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "c448ede2",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T03:08:24Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -33.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 1265,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -103.0,
-     "rsrq_db": -10.1,
-     "snr_db": 8.7,
-     "quality_pct": 33,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-68-61f85a",
-   "site_id": "punta-arenas-68",
-   "site": {
-    "local": "Av. Matta 4254",
-    "comuna": "Punta Arenas",
-    "region": "XII",
-    "short_id": "AC-69"
-   },
-   "boot_id": "boot-0cb1154f",
-   "run_id": "run-7041de18",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "5a042c57",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:14:06Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -29.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 12768,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -90.2,
-     "rsrq_db": -9.0,
-     "snr_db": 12.9,
-     "quality_pct": 59,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-15-3cd4a9",
-   "site_id": "quilicura-15",
-   "site": {
-    "local": "Av. Alemania 1396",
-    "comuna": "Quilicura",
-    "region": "RM",
-    "short_id": "AC-16"
-   },
-   "boot_id": "boot-c9bb5ccc",
-   "run_id": "run-d6ca8d42",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "397f5f16",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:06:26Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -29.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 1881,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -95.6,
-     "rsrq_db": -9.5,
-     "snr_db": 11.1,
-     "quality_pct": 48,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-39-e8d898",
-   "site_id": "quillota-39",
-   "site": {
-    "local": "Calle Baquedano 504",
-    "comuna": "Quillota",
-    "region": "V",
-    "short_id": "AC-40"
-   },
-   "boot_id": "boot-342ee203",
-   "run_id": "run-471b766e",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "65be029e",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:04:14Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -17.2,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 4863,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
      "rsrp_dbm": -111.7,
      "rsrq_db": -10.8,
      "snr_db": 5.8,
@@ -3083,21 +294,22 @@
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-38-2dc967",
-   "site_id": "quilpué-38",
+   "unit_id": "sim-45-3e7dfb",
+   "site_id": "balmaceda",
    "site": {
-    "local": "Av. Colón 1214",
-    "comuna": "Quilpué",
-    "region": "V",
-    "short_id": "AC-39"
+    "local": "Avenida Balmaceda 2885",
+    "comuna": "La Serena",
+    "region": "IV",
+    "short_id": "AC-47",
+    "tienda": "balmaceda"
    },
-   "boot_id": "boot-a6af889a",
-   "run_id": "run-c8932b51",
-   "ts": "2026-09-28T03:13:12Z",
+   "boot_id": "boot-16e4b3ad",
+   "run_id": "run-a6af889a",
+   "ts": "2026-09-30T18:25:01Z",
    "app_version": "0.1.0",
    "config_version": "b42e4756",
    "state": "STREAMING",
-   "state_since": "2026-09-28T01:39:29Z",
+   "state_since": "2026-09-30T16:51:18Z",
    "time_in_fallback_s": 0,
    "audio": {
     "rms_dbfs": -15.1,
@@ -3129,71 +341,10 @@
   {
    "net": {
     "lte": {
-     "rsrp_dbm": -92.1,
-     "rsrq_db": -9.2,
-     "snr_db": 12.3,
-     "quality_pct": 55,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-42-10cece",
-   "site_id": "rancagua-42",
-   "site": {
-    "local": "Calle Freire 113",
-    "comuna": "Rancagua",
-    "region": "VI",
-    "short_id": "AC-43"
-   },
-   "boot_id": "boot-79a1f70e",
-   "run_id": "run-57e55501",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "381dce3c",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:44:46Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -28.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 31593,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -109.6,
-     "rsrq_db": -10.6,
-     "snr_db": 6.5,
-     "quality_pct": 20,
+     "rsrp_dbm": -110.9,
+     "rsrq_db": -10.7,
+     "snr_db": 6.0,
+     "quality_pct": 18,
      "operator": "movistar",
      "tech": "lte",
      "state": "connected"
@@ -3205,512 +356,25 @@
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-07-e37e0c",
-   "site_id": "recoleta-07",
+   "unit_id": "sim-66-867e52",
+   "site_id": "bio-bio",
    "site": {
-    "local": "Av. Libertad 3260",
-    "comuna": "Recoleta",
-    "region": "RM",
-    "short_id": "AC-08"
-   },
-   "boot_id": "boot-1e0d3501",
-   "run_id": "run-04b263ef",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "28e78d7d",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:38:30Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -26.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 10587,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 1507.0,
-   "expected_interval_s": 10.0,
-   "offline": true,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -96.2,
-     "rsrq_db": -9.5,
-     "snr_db": 10.9,
-     "quality_pct": 47,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-40-15c4cc",
-   "site_id": "san-antonio-40",
-   "site": {
-    "local": "Calle Serrano 4113",
-    "comuna": "San Antonio",
-    "region": "V",
-    "short_id": "AC-41"
-   },
-   "boot_id": "boot-852a0c2e",
-   "run_id": "run-bc628823",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "26f16bf5",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:28:48Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -35.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 30442,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -93.3,
-     "rsrq_db": -9.3,
-     "snr_db": 11.9,
-     "quality_pct": 53,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-17-636c44",
-   "site_id": "san-bernardo-17",
-   "site": {
-    "local": "Av. O'Higgins 4178",
-    "comuna": "San Bernardo",
-    "region": "RM",
-    "short_id": "AC-18"
-   },
-   "boot_id": "boot-a4885758",
-   "run_id": "run-feebf4a3",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "94ac52ac",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:26:20Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -32.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 38353,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -94.1,
-     "rsrq_db": -9.3,
-     "snr_db": 11.6,
-     "quality_pct": 51,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-43-6c0833",
-   "site_id": "san-fernando-43",
-   "site": {
-    "local": "Calle Condell 411",
-    "comuna": "San Fernando",
-    "region": "VI",
-    "short_id": "AC-44"
-   },
-   "boot_id": "boot-4238adce",
-   "run_id": "run-0218d438",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "674250f9",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:50:29Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -22.0,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 34782,
-    "restarts_24h": 1
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -90.5,
-     "rsrq_db": -9.0,
-     "snr_db": 12.8,
-     "quality_pct": 58,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-09-921572",
-   "site_id": "san-miguel-09",
-   "site": {
-    "local": "Av. Vicuña Mackenna 3226",
-    "comuna": "San Miguel",
-    "region": "RM",
-    "short_id": "AC-10"
-   },
-   "boot_id": "boot-2e2c7436",
-   "run_id": "run-7e1cb7ea",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "23dbc6e7",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T03:04:45Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -35.0,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 17575,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -87.1,
-     "rsrq_db": -8.8,
-     "snr_db": 14.0,
-     "quality_pct": 65,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-06-b781a3",
-   "site_id": "santiago-06",
-   "site": {
-    "local": "Calle Esmeralda 3607",
-    "comuna": "Santiago",
-    "region": "RM",
-    "short_id": "AC-07"
-   },
-   "boot_id": "boot-49f3c040",
-   "run_id": "run-aa430fa5",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "4af3f49d",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:01:06Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -30.3,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 37251,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -88.8,
-     "rsrq_db": -8.9,
-     "snr_db": 13.4,
-     "quality_pct": 62,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-45-6c02f8",
-   "site_id": "talca-45",
-   "site": {
-    "local": "Av. Brasil 359",
-    "comuna": "Talca",
-    "region": "VII",
-    "short_id": "AC-46"
-   },
-   "boot_id": "boot-88fb2c72",
-   "run_id": "run-abf36c84",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "238c9272",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:27:17Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -15.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 14523,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -92.1,
-     "rsrq_db": -9.2,
-     "snr_db": 12.3,
-     "quality_pct": 55,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-52-b65f1a",
-   "site_id": "talcahuano-52",
-   "site": {
-    "local": "Av. Colón 3618",
-    "comuna": "Talcahuano",
+    "local": "Avenida Los Carrera 301",
+    "comuna": "Concepción",
     "region": "VIII",
-    "short_id": "AC-53"
+    "short_id": "AC-68",
+    "tienda": "bio-bio"
    },
-   "boot_id": "boot-99d6395c",
-   "run_id": "run-71fd0a2b",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "69c5bc07",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:16:04Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -17.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 30844,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -74.8,
-     "rsrq_db": -7.7,
-     "snr_db": 18.1,
-     "quality_pct": 90,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-56-45bbfe",
-   "site_id": "temuco-56",
-   "site": {
-    "local": "Av. Matta 4512",
-    "comuna": "Temuco",
-    "region": "IX",
-    "short_id": "AC-57"
-   },
-   "boot_id": "boot-fdc552e3",
-   "run_id": "run-fed77bfc",
-   "ts": "2026-09-28T03:13:12Z",
+   "boot_id": "boot-83311962",
+   "run_id": "run-0d4c2434",
+   "ts": "2026-09-30T18:25:01Z",
    "app_version": "0.1.0",
-   "config_version": "45022895",
+   "config_version": "05a23fb4",
    "state": "STREAMING",
-   "state_since": "2026-09-28T02:00:51Z",
+   "state_since": "2026-09-30T16:31:03Z",
    "time_in_fallback_s": 0,
    "audio": {
-    "rms_dbfs": -30.2,
+    "rms_dbfs": -20.6,
     "silent": false
    },
    "dac": {
@@ -3719,496 +383,8 @@
    },
    "mpv": {
     "responsive": true,
-    "time_pos": 32282,
+    "time_pos": 24356,
     "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -90.1,
-     "rsrq_db": -9.0,
-     "snr_db": 13.0,
-     "quality_pct": 59,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-29-8c7248",
-   "site_id": "tocopilla-29",
-   "site": {
-    "local": "Av. Alemania 178",
-    "comuna": "Tocopilla",
-    "region": "II",
-    "short_id": "AC-30"
-   },
-   "boot_id": "boot-d4550ad4",
-   "run_id": "run-a54bf5bd",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "73fcadec",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:22:51Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -25.7,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 28110,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -91.6,
-     "rsrq_db": -9.1,
-     "snr_db": 12.5,
-     "quality_pct": 56,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-55-db0904",
-   "site_id": "tomé-55",
-   "site": {
-    "local": "Av. Alemania 4241",
-    "comuna": "Tomé",
-    "region": "VIII",
-    "short_id": "AC-56"
-   },
-   "boot_id": "boot-a40b6175",
-   "run_id": "run-a5ba55dd",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "85d7ff22",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T01:38:19Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -22.9,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 28698,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -77.9,
-     "rsrq_db": -8.0,
-     "snr_db": 17.0,
-     "quality_pct": 84,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-60-0ae535",
-   "site_id": "valdivia-60",
-   "site": {
-    "local": "Av. Matta 1786",
-    "comuna": "Valdivia",
-    "region": "XIV",
-    "short_id": "AC-61"
-   },
-   "boot_id": "boot-33353317",
-   "run_id": "run-9937f0a2",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.0.9",
-   "config_version": "767aad00",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T03:08:51Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -17.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 17989,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -109.5,
-     "rsrq_db": -10.6,
-     "snr_db": 6.5,
-     "quality_pct": 20,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-31-910fe4",
-   "site_id": "vallenar-31",
-   "site": {
-    "local": "Av. Matta 533",
-    "comuna": "Vallenar",
-    "region": "III",
-    "short_id": "AC-32"
-   },
-   "boot_id": "boot-b0dc8962",
-   "run_id": "run-d97ad166",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "5898b7e5",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:06:05Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -24.6,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 14418,
-    "restarts_24h": 2
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "recycle",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 1531.0,
-   "expected_interval_s": 10.0,
-   "offline": true,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -103.6,
-     "rsrq_db": -10.1,
-     "snr_db": 8.5,
-     "quality_pct": 32,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-36-670366",
-   "site_id": "valparaíso-36",
-   "site": {
-    "local": "Av. Alemania 2370",
-    "comuna": "Valparaíso",
-    "region": "V",
-    "short_id": "AC-37"
-   },
-   "boot_id": "boot-60fcc267",
-   "run_id": "run-c70cbf45",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "d796d129",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:57:34Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -19.8,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 33637,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -93.0,
-     "rsrq_db": -9.2,
-     "snr_db": 12.0,
-     "quality_pct": 54,
-     "operator": "movistar",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-58-31864d",
-   "site_id": "villarrica-58",
-   "site": {
-    "local": "Calle Baquedano 2726",
-    "comuna": "Villarrica",
-    "region": "IX",
-    "short_id": "AC-59"
-   },
-   "boot_id": "boot-f159d0cc",
-   "run_id": "run-f94fee59",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "f0e395d9",
-   "state": "NO_AUDIO_DEVICE",
-   "state_since": "2026-09-28T02:45:49Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": null,
-    "silent": false
-   },
-   "dac": {
-    "present": false,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": false,
-    "time_pos": null,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": false,
-    "reachable": false
-   },
-   "last_restart_reason": null,
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -90.6,
-     "rsrq_db": -9.0,
-     "snr_db": 12.8,
-     "quality_pct": 58,
-     "operator": "entel",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-13-826899",
-   "site_id": "vitacura-13",
-   "site": {
-    "local": "Calle Esmeralda 972",
-    "comuna": "Vitacura",
-    "region": "RM",
-    "short_id": "AC-14"
-   },
-   "boot_id": "boot-28237263",
-   "run_id": "run-4e6e32bc",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "e5683a66",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:50:42Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -24.0,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 32091,
-    "restarts_24h": 0
-   },
-   "stream": {
-    "transport_ok": true,
-    "reachable": true
-   },
-   "last_restart_reason": "source_switch",
-   "transitions": [],
-   "command_results": [],
-   "forced_fallback": false,
-   "seconds_since": 4.0,
-   "expected_interval_s": 10.0,
-   "offline": false,
-   "silent_streak": 0,
-   "fallback_s_24h": 0
-  },
-  {
-   "net": {
-    "lte": {
-     "rsrp_dbm": -77.2,
-     "rsrq_db": -7.9,
-     "snr_db": 17.3,
-     "quality_pct": 85,
-     "operator": "wom",
-     "tech": "lte",
-     "state": "connected"
-    }
-   },
-   "volume": {
-    "mpv_pct": 70,
-    "hw_pct": 80,
-    "hw_control": "Master",
-    "hw_on": true
-   },
-   "unit_id": "sim-37-0397bc",
-   "site_id": "viña-del-mar-37",
-   "site": {
-    "local": "Av. Matta 3140",
-    "comuna": "Viña del Mar",
-    "region": "V",
-    "short_id": "AC-38"
-   },
-   "boot_id": "boot-c5b79d94",
-   "run_id": "run-10692c61",
-   "ts": "2026-09-28T03:13:12Z",
-   "app_version": "0.1.0",
-   "config_version": "a38e47ac",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T03:06:33Z",
-   "time_in_fallback_s": 0,
-   "audio": {
-    "rms_dbfs": -23.1,
-    "silent": false
-   },
-   "dac": {
-    "present": true,
-    "alsa_device": "alsa/acdac"
-   },
-   "mpv": {
-    "responsive": true,
-    "time_pos": 13740,
-    "restarts_24h": 1
    },
    "stream": {
     "transport_ok": true,
@@ -4242,22 +418,23 @@
     "hw_control": "Master",
     "hw_on": true
    },
-   "unit_id": "sim-02-373c7e",
-   "site_id": "ñuñoa-02",
+   "unit_id": "sim-03-3bec5f",
+   "site_id": "buin",
    "site": {
-    "local": "Av. España 1058",
-    "comuna": "Ñuñoa",
+    "local": "San Martín 174",
+    "comuna": "Buin",
     "region": "RM",
-    "short_id": "AC-03"
+    "short_id": "AC-05",
+    "tienda": "buin"
    },
    "boot_id": "boot-4dc9981a",
    "run_id": "run-4da84e49",
-   "ts": "2026-09-28T03:13:12Z",
+   "ts": "2026-09-30T18:25:01Z",
    "app_version": "0.0.9",
    "config_version": "a402c1e9",
-   "state": "STREAMING",
-   "state_since": "2026-09-28T02:01:06Z",
-   "time_in_fallback_s": 0,
+   "state": "FALLBACK",
+   "state_since": "2026-09-30T17:12:55Z",
+   "time_in_fallback_s": 4326,
    "audio": {
     "rms_dbfs": -17.7,
     "silent": false
@@ -4272,6 +449,192 @@
     "restarts_24h": 2
    },
    "stream": {
+    "transport_ok": false,
+    "reachable": false
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 4326
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -82.6,
+     "rsrq_db": -8.4,
+     "snr_db": 15.5,
+     "quality_pct": 74,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-38-f31166",
+   "site_id": "calama-centro",
+   "site": {
+    "local": "Avenida Granaderos 3657",
+    "comuna": "Calama",
+    "region": "II",
+    "short_id": "AC-40",
+    "tienda": "calama-centro"
+   },
+   "boot_id": "boot-07e7d3ef",
+   "run_id": "run-aa38fb66",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "69c2e6c5",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:04:53Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -30.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 6216,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -103.3,
+     "rsrq_db": -10.1,
+     "snr_db": 8.6,
+     "quality_pct": 33,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-04-2dbc2d",
+   "site_id": "catedral",
+   "site": {
+    "local": "Catedral 1850",
+    "comuna": "Santiago",
+    "region": "RM",
+    "short_id": "AC-06",
+    "tienda": "catedral"
+   },
+   "boot_id": "boot-8a65e4ec",
+   "run_id": "run-202e3871",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "ce5a59cc",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:46:59Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -16.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 31577,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -106.8,
+     "rsrq_db": -10.4,
+     "snr_db": 7.4,
+     "quality_pct": 26,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-65-3d87f3",
+   "site_id": "chillan",
+   "site": {
+    "local": "Avenida Ecuador 599",
+    "comuna": "Chillán",
+    "region": "XVI",
+    "short_id": "AC-67",
+    "tienda": "chillan"
+   },
+   "boot_id": "boot-45022895",
+   "run_id": "run-6e7a9fe6",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "eea43c13",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:18:43Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -28.1,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 4556,
+    "restarts_24h": 0
+   },
+   "stream": {
     "transport_ok": true,
     "reachable": true
    },
@@ -4280,6 +643,3781 @@
    "command_results": [],
    "forced_fallback": false,
    "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -89.1,
+     "rsrq_db": -8.9,
+     "snr_db": 13.3,
+     "quality_pct": 61,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 100,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-05-5f9291",
+   "site_id": "ciudad-empresarial",
+   "site": {
+    "local": "Avenida del Parque 4722",
+    "comuna": "Huechuraba",
+    "region": "RM",
+    "short_id": "AC-07",
+    "tienda": "ciudad-empresarial"
+   },
+   "boot_id": "boot-54b56d48",
+   "run_id": "run-01066f73",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "22277999",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:32:18Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -30.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 3653,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -104.5,
+     "rsrq_db": -10.2,
+     "snr_db": 8.2,
+     "quality_pct": 30,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-06-275ce4",
+   "site_id": "colina",
+   "site": {
+    "local": "La Inmaculada Concepción 47",
+    "comuna": "Colina",
+    "region": "RM",
+    "short_id": "AC-08",
+    "tienda": "colina"
+   },
+   "boot_id": "boot-3e0d73d8",
+   "run_id": "run-ed32117c",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "5905af9c",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:38:27Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -18.4,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 20798,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -86.3,
+     "rsrq_db": -8.7,
+     "snr_db": 14.2,
+     "quality_pct": 67,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-07-a19ade",
+   "site_id": "colina-chamisero",
+   "site": {
+    "local": "Avenida El Valle Central 12400",
+    "comuna": "Colina",
+    "region": "RM",
+    "short_id": "AC-09",
+    "tienda": "colina-chamisero"
+   },
+   "boot_id": "boot-78f3f7ff",
+   "run_id": "run-d6ef303f",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "4d6e7564",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:06:05Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -29.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 26730,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 1507.0,
+   "expected_interval_s": 10.0,
+   "offline": true,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -91.9,
+     "rsrq_db": -9.2,
+     "snr_db": 12.4,
+     "quality_pct": 56,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-46-571a87",
+   "site_id": "concon",
+   "site": {
+    "local": "Los Manantiales 955",
+    "comuna": "Concón",
+    "region": "V",
+    "short_id": "AC-48",
+    "tienda": "concon"
+   },
+   "boot_id": "boot-9f4d46da",
+   "run_id": "run-0ca4f29e",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "758065a4",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:51:29Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -22.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 39039,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -78.5,
+     "rsrq_db": -8.0,
+     "snr_db": 16.8,
+     "quality_pct": 83,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-39-f6c127",
+   "site_id": "copiapo-los-carrera",
+   "site": {
+    "local": "Avenida Los Carrera 4723",
+    "comuna": "Copiapó",
+    "region": "III",
+    "short_id": "AC-41",
+    "tienda": "copiapo-los-carrera"
+   },
+   "boot_id": "boot-78c44857",
+   "run_id": "run-c4b595b9",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "af02256a",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:47:57Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -28.9,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 36998,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -101.8,
+     "rsrq_db": -10.0,
+     "snr_db": 9.1,
+     "quality_pct": 36,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-42-d53fa2",
+   "site_id": "coquimbo",
+   "site": {
+    "local": "Presidente Alessandri 1150",
+    "comuna": "Coquimbo",
+    "region": "IV",
+    "short_id": "AC-44",
+    "tienda": "coquimbo"
+   },
+   "boot_id": "boot-c0161dec",
+   "run_id": "run-40d5eed8",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "6d6a08d7",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:58:02Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -23.2,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 13485,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -101.5,
+     "rsrq_db": -10.0,
+     "snr_db": 9.2,
+     "quality_pct": 37,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-47-23a660",
+   "site_id": "curauma",
+   "site": {
+    "local": "Cardenal Samoré 2290",
+    "comuna": "Valparaíso",
+    "region": "V",
+    "short_id": "AC-49",
+    "tienda": "curauma"
+   },
+   "boot_id": "boot-bf16a69a",
+   "run_id": "run-1f9a26a9",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "68795188",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:25:10Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -30.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 11230,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -96.8,
+     "rsrq_db": -9.6,
+     "snr_db": 10.7,
+     "quality_pct": 46,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-62-4b3827",
+   "site_id": "curico-norte",
+   "site": {
+    "local": "Carmen 1220",
+    "comuna": "Curicó",
+    "region": "VII",
+    "short_id": "AC-64",
+    "tienda": "curico-norte"
+   },
+   "boot_id": "boot-9db5ab59",
+   "run_id": "run-4afa1435",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "08db67bf",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:39:51Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -29.2,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 20104,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -108.4,
+     "rsrq_db": -10.5,
+     "snr_db": 6.9,
+     "quality_pct": 23,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-08-0edced",
+   "site_id": "el-bosque",
+   "site": {
+    "local": "",
+    "comuna": "El Bosque",
+    "region": "RM",
+    "short_id": "AC-10",
+    "tienda": "el-bosque"
+   },
+   "boot_id": "boot-cab33936",
+   "run_id": "run-4af3f49d",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "98a11ee1",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:58:16Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -14.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 20819,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -109.6,
+     "rsrq_db": -10.6,
+     "snr_db": 6.5,
+     "quality_pct": 20,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-09-c58d5a",
+   "site_id": "el-monte",
+   "site": {
+    "local": "Los Libertadores 316",
+    "comuna": "El Monte",
+    "region": "RM",
+    "short_id": "AC-11",
+    "tienda": "el-monte"
+   },
+   "boot_id": "boot-1e0d3501",
+   "run_id": "run-04b263ef",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "28e78d7d",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:50:19Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -26.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 10587,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -79.7,
+     "rsrq_db": -8.1,
+     "snr_db": 16.4,
+     "quality_pct": 80,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-67-31864d",
+   "site_id": "el-trebol",
+   "site": {
+    "local": "Avenida Presidente Jorge Alessandri Rodríguez 3177",
+    "comuna": "Talcahuano",
+    "region": "VIII",
+    "short_id": "AC-69",
+    "tienda": "el-trebol"
+   },
+   "boot_id": "boot-a5fa463d",
+   "run_id": "run-9d9e2568",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "c0d389bd",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:13:57Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -34.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 34634,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -86.2,
+     "rsrq_db": -8.7,
+     "snr_db": 14.3,
+     "quality_pct": 67,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-11-5c58e8",
+   "site_id": "huechuraba",
+   "site": {
+    "local": "Avenida Santa Marta de Huechuraba 7300",
+    "comuna": "Huechuraba",
+    "region": "RM",
+    "short_id": "AC-13",
+    "tienda": "huechuraba"
+   },
+   "boot_id": "boot-c38112ea",
+   "run_id": "run-33b8db02",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "06429c12",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:18:32Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -24.2,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 31632,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -86.0,
+     "rsrq_db": -8.7,
+     "snr_db": 14.3,
+     "quality_pct": 67,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-49-92f2fc",
+   "site_id": "la-calera",
+   "site": {
+    "local": "José Joaquín Pérez 12010",
+    "comuna": "La Calera",
+    "region": "V",
+    "short_id": "AC-51",
+    "tienda": "la-calera"
+   },
+   "boot_id": "boot-7cd11e81",
+   "run_id": "run-006cc555",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "1b6ff4df",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:34:51Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -26.1,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 14665,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -93.8,
+     "rsrq_db": -9.3,
+     "snr_db": 11.7,
+     "quality_pct": 52,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-01-b01a04",
+   "site_id": "la-cisterna",
+   "site": {
+    "local": "Gran Avenida José Miguel Carrera 8999",
+    "comuna": "La Cisterna",
+    "region": "RM",
+    "short_id": "AC-03",
+    "tienda": "la-cisterna"
+   },
+   "boot_id": "boot-56260a2a",
+   "run_id": "run-b34c9fa1",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "e7aca65c",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:25:58Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -33.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 11543,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -75.3,
+     "rsrq_db": -7.8,
+     "snr_db": 17.9,
+     "quality_pct": 89,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-13-87593c",
+   "site_id": "la-florida",
+   "site": {
+    "local": "Avenida Américo Vespucio 7310",
+    "comuna": "La Florida",
+    "region": "RM",
+    "short_id": "AC-15",
+    "tienda": "la-florida"
+   },
+   "boot_id": "boot-dbbcfdd6",
+   "run_id": "run-95c4166b",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "df4c2e89",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:27:49Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -34.9,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 30776,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -111.5,
+     "rsrq_db": -10.8,
+     "snr_db": 5.8,
+     "quality_pct": 17,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-12-41baa3",
+   "site_id": "las-condes",
+   "site": {
+    "local": "Avenida Presidente Kennedy 5601",
+    "comuna": "Las Condes",
+    "region": "RM",
+    "short_id": "AC-14",
+    "tienda": "las-condes"
+   },
+   "boot_id": "boot-87daa196",
+   "run_id": "run-8ef93cc8",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "5865a9e9",
+   "state": "FALLBACK",
+   "state_since": "2026-09-30T18:00:31Z",
+   "time_in_fallback_s": 1470,
+   "audio": {
+    "rms_dbfs": -33.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 5570,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": false,
+    "reachable": false
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 1470
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -111.6,
+     "rsrq_db": -10.8,
+     "snr_db": 5.8,
+     "quality_pct": 16,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-68-4e6dae",
+   "site_id": "los-angeles",
+   "site": {
+    "local": "Mendoza 535",
+    "comuna": "Los Ángeles",
+    "region": "VIII",
+    "short_id": "AC-70",
+    "tienda": "los-angeles"
+   },
+   "boot_id": "boot-94dd0cf1",
+   "run_id": "run-b86cfe29",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "27297697",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:46:39Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -26.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 23638,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -87.2,
+     "rsrq_db": -8.8,
+     "snr_db": 13.9,
+     "quality_pct": 65,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-69-615028",
+   "site_id": "los-angeles-alemania",
+   "site": {
+    "local": "Avenida Alemania 831",
+    "comuna": "Los Ángeles",
+    "region": "VIII",
+    "short_id": "AC-71",
+    "tienda": "los-angeles-alemania"
+   },
+   "boot_id": "boot-6e831d53",
+   "run_id": "run-05729af9",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "9937f0a2",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:04:14Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -20.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 1575,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -85.4,
+     "rsrq_db": -8.6,
+     "snr_db": 14.5,
+     "quality_pct": 69,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-14-5d281d",
+   "site_id": "los-dominicos",
+   "site": {
+    "local": "Avenida Padre Hurtado Sur 875",
+    "comuna": "Las Condes",
+    "region": "RM",
+    "short_id": "AC-16",
+    "tienda": "los-dominicos"
+   },
+   "boot_id": "boot-9d60d01b",
+   "run_id": "run-be0a1c19",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "21116c73",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:46:45Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -18.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 39897,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -102.7,
+     "rsrq_db": -10.1,
+     "snr_db": 8.8,
+     "quality_pct": 34,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-57-9c3c7d",
+   "site_id": "machali",
+   "site": {
+    "local": "Avenida San Juan 133",
+    "comuna": "Machalí",
+    "region": "VI",
+    "short_id": "AC-59",
+    "tienda": "machali"
+   },
+   "boot_id": "boot-694fb6bd",
+   "run_id": "run-9b43bc5d",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "b37d93ae",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:45:34Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -19.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 13112,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -104.2,
+     "rsrq_db": -10.2,
+     "snr_db": 8.3,
+     "quality_pct": 31,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-15-069e4a",
+   "site_id": "maipu",
+   "site": {
+    "local": "Avenida Pajaritos 2356",
+    "comuna": "Maipú",
+    "region": "RM",
+    "short_id": "AC-17",
+    "tienda": "maipu"
+   },
+   "boot_id": "boot-31f39209",
+   "run_id": "run-f1b4ba49",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "28237263",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:00:39Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -30.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 25182,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -79.2,
+     "rsrq_db": -8.1,
+     "snr_db": 16.6,
+     "quality_pct": 81,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-50-3a7093",
+   "site_id": "maitencillo",
+   "site": {
+    "local": "San Isidro Gaete 476",
+    "comuna": "Puchuncaví",
+    "region": "V",
+    "short_id": "AC-52",
+    "tienda": "maitencillo"
+   },
+   "boot_id": "boot-2945f1a7",
+   "run_id": "run-f8b87359",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "4238adce",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:47:37Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -33.6,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 25031,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -112.0,
+     "rsrq_db": -10.8,
+     "snr_db": 5.7,
+     "quality_pct": 16,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-40-93c454",
+   "site_id": "mall-plaza-copiapo",
+   "site": {
+    "local": "Maipú 109",
+    "comuna": "Copiapó",
+    "region": "III",
+    "short_id": "AC-42",
+    "tienda": "mall-plaza-copiapo"
+   },
+   "boot_id": "boot-ad3333c7",
+   "run_id": "run-ea2f73a9",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "42e45b90",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:24:58Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -34.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 10023,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -73.1,
+     "rsrq_db": -7.6,
+     "snr_db": 18.6,
+     "quality_pct": 93,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-44-2205b1",
+   "site_id": "mall-plaza-la-serena",
+   "site": {
+    "local": "Alberto Solari 1400",
+    "comuna": "La Serena",
+    "region": "IV",
+    "short_id": "AC-46",
+    "tienda": "mall-plaza-la-serena"
+   },
+   "boot_id": "boot-d331d03d",
+   "run_id": "run-df95583f",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "0d17d017",
+   "state": "FALLBACK",
+   "state_since": "2026-09-30T17:27:50Z",
+   "time_in_fallback_s": 3431,
+   "audio": {
+    "rms_dbfs": -20.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 13740,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": false,
+    "reachable": false
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 3431
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -104.3,
+     "rsrq_db": -10.2,
+     "snr_db": 8.2,
+     "quality_pct": 31,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-16-e7b974",
+   "site_id": "mall-plaza-tobalaba",
+   "site": {
+    "local": "Avenida Camilo Henríquez 3296",
+    "comuna": "Puente Alto",
+    "region": "RM",
+    "short_id": "AC-18",
+    "tienda": "mall-plaza-tobalaba"
+   },
+   "boot_id": "boot-1d6c8c26",
+   "run_id": "run-db83618b",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "cbcd2443",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:01:12Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -23.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 8691,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -79.8,
+     "rsrq_db": -8.2,
+     "snr_db": 16.4,
+     "quality_pct": 80,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-17-f0acb5",
+   "site_id": "melipilla",
+   "site": {
+    "local": "Serrano 395",
+    "comuna": "Melipilla",
+    "region": "RM",
+    "short_id": "AC-19",
+    "tienda": "melipilla"
+   },
+   "boot_id": "boot-2c047264",
+   "run_id": "run-355a794d",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "a1cf4703",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:27:40Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -25.6,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 10675,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "audio": {
+    "rms_dbfs": -19.8,
+    "silent": false
+   },
+   "forced_fallback": false,
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "96adc18211af42c1ba49ef5c0574da54",
+   "site_id": "nataniel-cox-01",
+   "site": {
+    "local": "Nataniel Cox 620",
+    "comuna": "Santiago",
+    "region": "RM",
+    "short_id": "AC-01",
+    "tienda": "nataniel-cox"
+   },
+   "state": "STREAMING",
+   "state_since": "2026-09-17T17:13:12Z",
+   "time_in_fallback_s": 0,
+   "ts": "2026-09-18T20:59:52Z",
+   "seconds_since": 800000.0,
+   "expected_interval_s": 10.0,
+   "offline": true,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -86.8,
+     "rsrq_db": -8.7,
+     "snr_db": 14.1,
+     "quality_pct": 66,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-43-1eb49c",
+   "site_id": "ovalle",
+   "site": {
+    "local": "Avenida Benavente 1075",
+    "comuna": "Ovalle",
+    "region": "IV",
+    "short_id": "AC-45",
+    "tienda": "ovalle"
+   },
+   "boot_id": "boot-c70cbf45",
+   "run_id": "run-d796d129",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "1194515b",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:48:47Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -21.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 2567,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -104.4,
+     "rsrq_db": -10.2,
+     "snr_db": 8.2,
+     "quality_pct": 31,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-18-623b28",
+   "site_id": "padre-hurtado",
+   "site": {
+    "local": "Camino a Melipilla 2436",
+    "comuna": "Padre Hurtado",
+    "region": "RM",
+    "short_id": "AC-20",
+    "tienda": "padre-hurtado"
+   },
+   "boot_id": "boot-d6ca8d42",
+   "run_id": "run-d866f20f",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "29f7a032",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:56:07Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -23.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 9834,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -109.5,
+     "rsrq_db": -10.6,
+     "snr_db": 6.5,
+     "quality_pct": 21,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-19-0d640e",
+   "site_id": "penaflor",
+   "site": {
+    "local": "Alcalde Luis Araya Cereceda 4237",
+    "comuna": "Peñaflor",
+    "region": "RM",
+    "short_id": "AC-21",
+    "tienda": "penaflor"
+   },
+   "boot_id": "boot-c9a01b81",
+   "run_id": "run-79796988",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "537e3906",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:14:01Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -22.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 24130,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -108.0,
+     "rsrq_db": -10.5,
+     "snr_db": 7.0,
+     "quality_pct": 24,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-20-465029",
+   "site_id": "piedra-roja",
+   "site": {
+    "local": "",
+    "comuna": "Colina",
+    "region": "RM",
+    "short_id": "AC-22",
+    "tienda": "piedra-roja"
+   },
+   "boot_id": "boot-b3d86089",
+   "run_id": "run-a4885758",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "feebf4a3",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:22:55Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -16.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 1877,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -80.2,
+     "rsrq_db": -8.2,
+     "snr_db": 16.3,
+     "quality_pct": 79,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-21-8b1d28",
+   "site_id": "plaza-egana",
+   "site": {
+    "local": "Avenida Larraín 5861",
+    "comuna": "Ñuñoa",
+    "region": "RM",
+    "short_id": "AC-23",
+    "tienda": "plaza-egana"
+   },
+   "boot_id": "boot-78562b3b",
+   "run_id": "run-6e7ce46f",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "33697888",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:40:17Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -25.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 4070,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -84.2,
+     "rsrq_db": -8.5,
+     "snr_db": 14.9,
+     "quality_pct": 71,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-22-64de69",
+   "site_id": "plaza-oeste",
+   "site": {
+    "local": "Avenida Américo Vespucio 1501",
+    "comuna": "Cerrillos",
+    "region": "RM",
+    "short_id": "AC-24",
+    "tienda": "plaza-oeste"
+   },
+   "boot_id": "boot-41b0b3fa",
+   "run_id": "run-acb59db5",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "36f3c7ac",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:51:34Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -29.9,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 31997,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -86.8,
+     "rsrq_db": -8.7,
+     "snr_db": 14.1,
+     "quality_pct": 66,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-10-01b803",
+   "site_id": "providencia",
+   "site": {
+    "local": "Avenida Bilbao 451",
+    "comuna": "Providencia",
+    "region": "RM",
+    "short_id": "AC-12",
+    "tienda": "providencia"
+   },
+   "boot_id": "boot-006a33c2",
+   "run_id": "run-8fc5e8a9",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "0e395a09",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:32:37Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -25.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 33556,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -90.8,
+     "rsrq_db": -9.1,
+     "snr_db": 12.7,
+     "quality_pct": 58,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-23-9fa601",
+   "site_id": "puente-alto",
+   "site": {
+    "local": "Avenida Concha y Toro 1477",
+    "comuna": "Puente Alto",
+    "region": "RM",
+    "short_id": "AC-25",
+    "tienda": "puente-alto"
+   },
+   "boot_id": "boot-4d578683",
+   "run_id": "run-7a2325f0",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "e316ed48",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:16:17Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -25.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 8660,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -76.0,
+     "rsrq_db": -7.8,
+     "snr_db": 17.7,
+     "quality_pct": 87,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-24-e1778f",
+   "site_id": "quilicura",
+   "site": {
+    "local": "Avenida Bernardo O'Higgins 800",
+    "comuna": "Quilicura",
+    "region": "RM",
+    "short_id": "AC-26",
+    "tienda": "quilicura"
+   },
+   "boot_id": "boot-c450f395",
+   "run_id": "run-5b81613e",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "1dc01307",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:41:07Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -24.8,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 6292,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -105.1,
+     "rsrq_db": -10.3,
+     "snr_db": 8.0,
+     "quality_pct": 29,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-25-be9548",
+   "site_id": "quilin",
+   "site": {
+    "local": "Altos del Parque Sur 5800",
+    "comuna": "Peñalolén",
+    "region": "RM",
+    "short_id": "AC-27",
+    "tienda": "quilin"
+   },
+   "boot_id": "boot-24790bbb",
+   "run_id": "run-e6467965",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "791df745",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:20:47Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -22.9,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 21402,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -89.0,
+     "rsrq_db": -8.9,
+     "snr_db": 13.3,
+     "quality_pct": 62,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-34-aad92b",
+   "site_id": "quillayes",
+   "site": {
+    "local": "Avenida Vicuña Mackenna 10811",
+    "comuna": "La Florida",
+    "region": "RM",
+    "short_id": "AC-36",
+    "tienda": "quillayes"
+   },
+   "boot_id": "boot-88863283",
+   "run_id": "run-f5ca70fa",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "87da76c6",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:22:12Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -28.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 30303,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -80.6,
+     "rsrq_db": -8.2,
+     "snr_db": 16.1,
+     "quality_pct": 78,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-51-356c95",
+   "site_id": "quillota-las-palmas",
+   "site": {
+    "local": "Carlos Condell 1687",
+    "comuna": "Quillota",
+    "region": "V",
+    "short_id": "AC-53",
+    "tienda": "quillota-las-palmas"
+   },
+   "boot_id": "boot-9013594e",
+   "run_id": "run-aeb0dc7e",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "d6c0278b",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:17:20Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -21.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 4373,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -87.2,
+     "rsrq_db": -8.8,
+     "snr_db": 13.9,
+     "quality_pct": 65,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-52-5f6540",
+   "site_id": "quilpue",
+   "site": {
+    "local": "Freire 120",
+    "comuna": "Quilpué",
+    "region": "V",
+    "short_id": "AC-54",
+    "tienda": "quilpue"
+   },
+   "boot_id": "boot-a72456bb",
+   "run_id": "run-bdbb6743",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "36017c08",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:51:32Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -32.6,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 14724,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -78.5,
+     "rsrq_db": -8.0,
+     "snr_db": 16.8,
+     "quality_pct": 83,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-58-ab2f89",
+   "site_id": "rancagua-centro",
+   "site": {
+    "local": "Sargento Cuevas 405",
+    "comuna": "Rancagua",
+    "region": "VI",
+    "short_id": "AC-60",
+    "tienda": "rancagua-centro"
+   },
+   "boot_id": "boot-42f2249e",
+   "run_id": "run-e0db78f1",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "a1576b3d",
+   "state": "NO_AUDIO_DEVICE",
+   "state_since": "2026-09-30T17:57:29Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": null,
+    "silent": false
+   },
+   "dac": {
+    "present": false,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": false,
+    "time_pos": null,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": false,
+    "reachable": false
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -109.2,
+     "rsrq_db": -10.6,
+     "snr_db": 6.6,
+     "quality_pct": 21,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-00-eb9516",
+   "site_id": "recoleta",
+   "site": {
+    "local": "Avenida Recoleta 806",
+    "comuna": "Recoleta",
+    "region": "RM",
+    "short_id": "AC-02",
+    "tienda": "recoleta"
+   },
+   "boot_id": "boot-8de01766",
+   "run_id": "run-aa138bd3",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "bf2b91cd",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:53:34Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -31.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 14260,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -81.6,
+     "rsrq_db": -8.3,
+     "snr_db": 15.8,
+     "quality_pct": 76,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-53-471924",
+   "site_id": "renaca",
+   "site": {
+    "local": "Avenida Vicuña Mackenna 1050",
+    "comuna": "Viña del Mar",
+    "region": "V",
+    "short_id": "AC-55",
+    "tienda": "renaca"
+   },
+   "boot_id": "boot-7c5246dc",
+   "run_id": "run-6bc8d0a8",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "6ddff6ec",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:58:00Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -31.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 23768,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -83.9,
+     "rsrq_db": -8.5,
+     "snr_db": 15.0,
+     "quality_pct": 72,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-59-ad2a8a",
+   "site_id": "rengo",
+   "site": {
+    "local": "Carlos Condell 100",
+    "comuna": "Rengo",
+    "region": "VI",
+    "short_id": "AC-61",
+    "tienda": "rengo"
+   },
+   "boot_id": "boot-16e9afbe",
+   "run_id": "run-c0c3560d",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "c932d64c",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:13:22Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -26.9,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 17834,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -95.7,
+     "rsrq_db": -9.5,
+     "snr_db": 11.1,
+     "quality_pct": 48,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-54-537461",
+   "site_id": "san-antonio",
+   "site": {
+    "local": "Avenida Barros Luco 1399",
+    "comuna": "San Antonio",
+    "region": "V",
+    "short_id": "AC-56",
+    "tienda": "san-antonio"
+   },
+   "boot_id": "boot-245f2f3c",
+   "run_id": "run-d10cf86c",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "e1c196d2",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:39:13Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -27.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 13183,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -84.1,
+     "rsrq_db": -8.5,
+     "snr_db": 15.0,
+     "quality_pct": 71,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-26-457f52",
+   "site_id": "san-bernardo-estacion",
+   "site": {
+    "local": "Arturo Prat 117",
+    "comuna": "San Bernardo",
+    "region": "RM",
+    "short_id": "AC-28",
+    "tienda": "san-bernardo-estacion"
+   },
+   "boot_id": "boot-946c7d67",
+   "run_id": "run-40f3aeb4",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "7195068b",
+   "state": "FALLBACK",
+   "state_since": "2026-09-30T17:42:18Z",
+   "time_in_fallback_s": 2563,
+   "audio": {
+    "rms_dbfs": -32.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 699,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": false,
+    "reachable": false
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 2563
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -90.7,
+     "rsrq_db": -9.1,
+     "snr_db": 12.8,
+     "quality_pct": 58,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-27-0358a7",
+   "site_id": "san-bernardo-plaza",
+   "site": {
+    "local": "O'Higgins 528",
+    "comuna": "San Bernardo",
+    "region": "RM",
+    "short_id": "AC-29",
+    "tienda": "san-bernardo-plaza"
+   },
+   "boot_id": "boot-4b0e696c",
+   "run_id": "run-a557d8d0",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "aa6bfefe",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:48:03Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -25.1,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 24976,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -74.8,
+     "rsrq_db": -7.7,
+     "snr_db": 18.1,
+     "quality_pct": 90,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-55-f9a8e3",
+   "site_id": "san-felipe",
+   "site": {
+    "local": "Avenida Libertador Bernardo O'Higgins 1150",
+    "comuna": "San Felipe",
+    "region": "V",
+    "short_id": "AC-57",
+    "tienda": "san-felipe"
+   },
+   "boot_id": "boot-33c63ee1",
+   "run_id": "run-e3d22204",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "09fddc7f",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:22:56Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -33.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 34106,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -93.6,
+     "rsrq_db": -9.3,
+     "snr_db": 11.8,
+     "quality_pct": 52,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-60-52e86f",
+   "site_id": "san-fernando",
+   "site": {
+    "local": "Carampangue 681",
+    "comuna": "San Fernando",
+    "region": "VI",
+    "short_id": "AC-62",
+    "tienda": "san-fernando"
+   },
+   "boot_id": "boot-e2464795",
+   "run_id": "run-5b2f8d57",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "99d6395c",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:23:14Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -21.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 6230,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -99.7,
+     "rsrq_db": -9.8,
+     "snr_db": 9.8,
+     "quality_pct": 40,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-61-d287fb",
+   "site_id": "san-vicente",
+   "site": {
+    "local": "Diego Portales 081",
+    "comuna": "San Vicente de Tagua Tagua",
+    "region": "VI",
+    "short_id": "AC-63",
+    "tienda": "san-vicente"
+   },
+   "boot_id": "boot-ef1ed493",
+   "run_id": "run-0e5b400a",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "40e05e79",
+   "state": "FALLBACK",
+   "state_since": "2026-09-30T17:47:13Z",
+   "time_in_fallback_s": 2268,
+   "audio": {
+    "rms_dbfs": -25.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 23784,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": false,
+    "reachable": false
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 2268
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -97.8,
+     "rsrq_db": -9.7,
+     "snr_db": 10.4,
+     "quality_pct": 44,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-56-64e88d",
+   "site_id": "santa-julia",
+   "site": {
+    "local": "Alessandri 4025",
+    "comuna": "Viña del Mar",
+    "region": "V",
+    "short_id": "AC-58",
+    "tienda": "santa-julia"
+   },
+   "boot_id": "boot-0d8cce2b",
+   "run_id": "run-d1bacc08",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "44865c64",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:48:46Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -28.6,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 18534,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -79.8,
+     "rsrq_db": -8.2,
+     "snr_db": 16.4,
+     "quality_pct": 80,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-28-96f483",
+   "site_id": "talagante-cordillera",
+   "site": {
+    "local": "Los Aromos 0441",
+    "comuna": "Talagante",
+    "region": "RM",
+    "short_id": "AC-30",
+    "tienda": "talagante-cordillera"
+   },
+   "boot_id": "boot-a5524183",
+   "run_id": "run-2de38947",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "a35f82f6",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:37:20Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -18.5,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 24309,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -83.7,
+     "rsrq_db": -8.5,
+     "snr_db": 15.1,
+     "quality_pct": 72,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-29-f8dbb6",
+   "site_id": "talagante-plaza",
+   "site": {
+    "local": "Eyzaguirre 715",
+    "comuna": "Talagante",
+    "region": "RM",
+    "short_id": "AC-31",
+    "tienda": "talagante-plaza"
+   },
+   "boot_id": "boot-b7109068",
+   "run_id": "run-0f733f1a",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "20e3edb5",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:37:21Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -19.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 27415,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -97.0,
+     "rsrq_db": -9.6,
+     "snr_db": 10.7,
+     "quality_pct": 45,
+     "operator": "wom",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-63-6bd9ed",
+   "site_id": "talca",
+   "site": {
+    "local": "Cuatro Norte 1530",
+    "comuna": "Talca",
+    "region": "VII",
+    "short_id": "AC-65",
+    "tienda": "talca"
+   },
+   "boot_id": "boot-023141e9",
+   "run_id": "run-bd6674cc",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "6c6898ba",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:55:20Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -23.4,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 32543,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -98.6,
+     "rsrq_db": -9.7,
+     "snr_db": 10.1,
+     "quality_pct": 42,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-64-294596",
+   "site_id": "talca-colin",
+   "site": {
+    "local": "Avenida Colín 665",
+    "comuna": "Talca",
+    "region": "VII",
+    "short_id": "AC-66",
+    "tienda": "talca-colin"
+   },
+   "boot_id": "boot-b00ab54f",
+   "run_id": "run-a38f8915",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "6eee9acf",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:42:12Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -21.2,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 8965,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -72.3,
+     "rsrq_db": -7.5,
+     "snr_db": 18.9,
+     "quality_pct": 95,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-41-f9a441",
+   "site_id": "vallenar",
+   "site": {
+    "local": "Brasil 941",
+    "comuna": "Vallenar",
+    "region": "III",
+    "short_id": "AC-43",
+    "tienda": "vallenar"
+   },
+   "boot_id": "boot-5d395620",
+   "run_id": "run-2753839d",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "95dafd5e",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:50:03Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -31.0,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 39208,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -108.3,
+     "rsrq_db": -10.5,
+     "snr_db": 6.9,
+     "quality_pct": 23,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-48-323894",
+   "site_id": "valparaiso",
+   "site": {
+    "local": "Avenida Francia 748",
+    "comuna": "Valparaíso",
+    "region": "V",
+    "short_id": "AC-50",
+    "tienda": "valparaiso"
+   },
+   "boot_id": "boot-8f08c7c6",
+   "run_id": "run-27ffdba7",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "c83cf576",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:07:12Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -17.2,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 3049,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -99.2,
+     "rsrq_db": -9.8,
+     "snr_db": 9.9,
+     "quality_pct": 41,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-30-a68dce",
+   "site_id": "vicuna-mackenna",
+   "site": {
+    "local": "Vicuña Mackenna 665",
+    "comuna": "Santiago",
+    "region": "RM",
+    "short_id": "AC-32",
+    "tienda": "vicuna-mackenna"
+   },
+   "boot_id": "boot-4f91abcf",
+   "run_id": "run-7a41e6f1",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "268bca2a",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:03:49Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -31.2,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 7346,
+    "restarts_24h": 0
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "recycle",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -80.6,
+     "rsrq_db": -8.2,
+     "snr_db": 16.1,
+     "quality_pct": 78,
+     "operator": "movistar",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-31-ee0473",
+   "site_id": "vitacura",
+   "site": {
+    "local": "Avenida Vitacura 9019",
+    "comuna": "Vitacura",
+    "region": "RM",
+    "short_id": "AC-33",
+    "tienda": "vitacura"
+   },
+   "boot_id": "boot-71e46b80",
+   "run_id": "run-804cb41d",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "b09f8a67",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T16:27:52Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -29.3,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 10300,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": "source_switch",
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 1531.0,
+   "expected_interval_s": 10.0,
+   "offline": true,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -109.0,
+     "rsrq_db": -10.6,
+     "snr_db": 6.7,
+     "quality_pct": 22,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-32-5030b6",
+   "site_id": "vivaceta",
+   "site": {
+    "local": "Avenida Fermín Vivaceta 1030",
+    "comuna": "Independencia",
+    "region": "RM",
+    "short_id": "AC-34",
+    "tienda": "vivaceta"
+   },
+   "boot_id": "boot-c695f308",
+   "run_id": "run-a37e7ec1",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.0.9",
+   "config_version": "f868cd84",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T18:05:23Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -16.9,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 30409,
+    "restarts_24h": 2
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "net": {
+    "lte": {
+     "rsrp_dbm": -110.5,
+     "rsrq_db": -10.7,
+     "snr_db": 6.2,
+     "quality_pct": 19,
+     "operator": "entel",
+     "tech": "lte",
+     "state": "connected"
+    }
+   },
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "sim-33-c0b0d8",
+   "site_id": "walker-martinez",
+   "site": {
+    "local": "Walker Martínez 3600",
+    "comuna": "La Florida",
+    "region": "RM",
+    "short_id": "AC-35",
+    "tienda": "walker-martinez"
+   },
+   "boot_id": "boot-eb560ba3",
+   "run_id": "run-b99d21ea",
+   "ts": "2026-09-30T18:25:01Z",
+   "app_version": "0.1.0",
+   "config_version": "3808e50f",
+   "state": "STREAMING",
+   "state_since": "2026-09-30T17:56:31Z",
+   "time_in_fallback_s": 0,
+   "audio": {
+    "rms_dbfs": -17.7,
+    "silent": false
+   },
+   "dac": {
+    "present": true,
+    "alsa_device": "alsa/acdac"
+   },
+   "mpv": {
+    "responsive": true,
+    "time_pos": 39455,
+    "restarts_24h": 1
+   },
+   "stream": {
+    "transport_ok": true,
+    "reachable": true
+   },
+   "last_restart_reason": null,
+   "transitions": [],
+   "command_results": [],
+   "forced_fallback": false,
+   "seconds_since": 4.0,
+   "expected_interval_s": 10.0,
+   "offline": false,
+   "silent_streak": 0,
+   "fallback_s_24h": 0
+  },
+  {
+   "audio": {
+    "rms_dbfs": -19.8,
+    "silent": false
+   },
+   "forced_fallback": false,
+   "volume": {
+    "mpv_pct": 70,
+    "hw_pct": 80,
+    "hw_control": "Master",
+    "hw_on": true
+   },
+   "unit_id": "fdbaaaf2520183b5debe89746a6dc304",
+   "site_id": "x98h-lab-02",
+   "state": "STREAMING",
+   "state_since": "2026-09-28T01:49:52Z",
+   "time_in_fallback_s": 0,
+   "ts": "2026-09-28T03:13:04Z",
+   "seconds_since": 8.0,
    "expected_interval_s": 10.0,
    "offline": false,
    "silent_streak": 0,

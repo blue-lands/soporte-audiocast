@@ -48,15 +48,21 @@ class Busqueda:
 def asociar(cajas: dict[str, dict]) -> list[Tienda]:
     """Las 71 tiendas, cada una con su caja. Una caja por tienda.
 
-    1. Las tiendas con caja real (fuente.CAJAS_REALES).
-    2. El resto, con una caja simulada: de la misma comuna; si no queda, de la misma región; si no, cualquiera libre.
-    Cada paso recorre todas las tiendas antes del siguiente, para que una tienda no le quite a otra la caja de su comuna.
+    1. La que la central dice que es de esa tienda (`site.tienda`, desde 2026-09-30): real o simulada. La asignación
+       vive en la central (`central/tiendas.py` de audiocast-player), no aquí.
+    2. Solo si algo queda sin tienda (el archivo de ejemplo no trae `site.tienda`): una caja simulada de la misma
+       comuna; si no queda, de la misma región; si no, cualquiera libre. Cada paso recorre todas las tiendas antes del
+       siguiente, para que una tienda no le quite a otra la caja de su comuna.
     """
-    libres = sorted((caja for unit_id, caja in cajas.items() if unit_id.startswith("sim-")), key=_orden_caja)
-    asignada: dict[str, tuple[str, str | None]] = {
-        tienda_id: (unit_id, (cajas.get(unit_id) or {}).get("site_id"))
-        for tienda_id, unit_id in fuente.CAJAS_REALES.items()
-    }
+    ids = {tienda[0] for tienda in fuente.TIENDAS}
+    asignada: dict[str, tuple[str, str | None]] = {}
+    for caja in sorted(cajas.values(), key=_orden_caja):
+        tienda_id = (caja.get("site") or {}).get("tienda")
+        if tienda_id in ids and tienda_id not in asignada:
+            asignada[tienda_id] = (caja["unit_id"], caja.get("site_id"))
+    usadas = {unit_id for unit_id, _site_id in asignada.values()}
+    libres = sorted((caja for unit_id, caja in cajas.items() if unit_id.startswith("sim-") and unit_id not in usadas),
+                    key=_orden_caja)
 
     def repartir(calza, solo=lambda nombre, comuna: True):
         for tienda_id, nombre, comuna, region, _alias in fuente.TIENDAS:

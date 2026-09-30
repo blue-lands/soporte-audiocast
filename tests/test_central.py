@@ -32,11 +32,14 @@ def test_pide_con_get_y_bearer():
 
 def test_acepta_la_lista_suelta():
     cajas = central.leer_cajas(CONFIG, transporte=central_falsa(httpx.Response(200, json=UNIDADES)))
-    assert set(cajas) == {"sim-07-e37e0c", "minipc-lab-01"}
+    assert set(cajas) == {"sim-07-e37e0c", "minipc-lab-01", "nataniel-cox-01"}
 
 
-def test_la_piloto_no_existe_para_la_app():
-    cajas = central.leer_cajas(CONFIG, transporte=central_falsa(httpx.Response(200, json={"units": UNIDADES})))
+def test_una_caja_oculta_no_existe_para_la_app():
+    # Desde 2026-09-30 no se oculta ninguna por defecto (hrm: la asistente puede mencionar Nataniel Cox); el
+    # mecanismo queda por si hace falta (SOPORTE_CAJAS_OCULTAS).
+    con_oculta = dataclasses.replace(CONFIG, cajas_ocultas=("nataniel-cox-01",))
+    cajas = central.leer_cajas(con_oculta, transporte=central_falsa(httpx.Response(200, json={"units": UNIDADES})))
     assert "nataniel-cox-01" not in cajas
     assert central.buscar_caja(cajas, "nataniel-cox-01") is None
 
@@ -80,7 +83,7 @@ def test_sin_token_no_llama_a_la_central():
 def test_ignora_entradas_sin_unit_id():
     revueltas = [*UNIDADES, {"state": "STREAMING"}, "texto", None, {"unit_id": 7}]
     cajas = central.leer_cajas(CONFIG, transporte=central_falsa(httpx.Response(200, json=revueltas)))
-    assert set(cajas) == {"sim-07-e37e0c", "minipc-lab-01"}
+    assert set(cajas) == {"sim-07-e37e0c", "minipc-lab-01", "nataniel-cox-01"}
 
 
 def test_busca_por_site_id_si_cambio_el_unit_id():
@@ -93,9 +96,9 @@ def test_archivo_de_ejemplo_y_cache(tmp_path):
     archivo = tmp_path / "units.json"
     archivo.write_text(json.dumps({"units": UNIDADES}), encoding="utf-8")
     config = Config(db_path=":memory:", central_archivo=str(archivo))
-    assert set(central.leer_cajas(config)) == {"sim-07-e37e0c", "minipc-lab-01"}
+    assert set(central.leer_cajas(config)) == {"sim-07-e37e0c", "minipc-lab-01", "nataniel-cox-01"}
     archivo.write_text(json.dumps({"units": []}), encoding="utf-8")
-    assert len(central.leer_cajas(config)) == 2  # 10 s de caché
+    assert len(central.leer_cajas(config)) == 3  # 10 s de caché
     assert central.leer_cajas(config, usar_cache=False) == {}
 
 
