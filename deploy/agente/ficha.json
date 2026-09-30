@@ -1,0 +1,11 @@
+{
+  "tienda": {"type": "string", "description": "Nombre de la tienda Tóttus desde la que llama la persona, tal como quedó confirmada en la llamada (por ejemplo, 'Recoleta' o 'Reñaca'). Vacío si no se supo."},
+  "nombre_contacto": {"type": "string", "description": "Nombre de la persona que llama, tal como lo dijo. Vacío si no lo dijo."},
+  "problema": {"type": "string", "description": "Tipo de problema. Escribe exactamente uno de estos valores: sin_audio (no suena nada), volumen (suena muy bajo o muy alto), aviso_no_salio (un aviso o mensaje no se escuchó), musica (algo con la música: se repite, no es la que corresponde, se corta), otro (cualquier otra cosa). Vacío si la persona no contó un problema.", "enum": ["sin_audio", "volumen", "aviso_no_salio", "musica", "otro"]},
+  "desde_cuando": {"type": "string", "description": "Desde cuándo pasa, en palabras simples (por ejemplo, 'desde esta mañana' o 'desde ayer en la tarde'). Vacío si no se dijo."},
+  "motivo": {"type": "string", "description": "Título corto del caso, de 2 a 5 palabras. Por ejemplo: 'Tienda sin música', 'Aviso de cierre no salió', 'Volumen muy bajo'."},
+  "resumen": {"type": "string", "description": "Lo que pasa y lo que se hizo en la llamada, en una o dos frases breves en español, sin repetir el nombre de la persona."},
+  "urgencia": {"type": "boolean", "description": "true si la tienda está en silencio ahora (no suena nada) o si el problema afecta a los clientes en este momento; false en otro caso."},
+  "resuelto_en_llamada": {"type": "boolean", "description": "true si la persona dijo que el problema quedó solucionado durante la llamada (por ejemplo, encendió el amplificador y volvió a sonar); false en otro caso."},
+  "requiere_tecnico": {"type": "boolean", "description": "true si el problema no se solucionó en la llamada y necesita que el equipo técnico lo revise; false si quedó solucionado o si solo era una consulta."}
+}
