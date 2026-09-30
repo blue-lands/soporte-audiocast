@@ -1,5 +1,10 @@
 # CLAUDE.md
 
+> **Desde 2026-09-30 esta app la escribe y la despliega la instancia de vps7. La instancia de vps4 solo lee.**
+> Decisión de hrm: una sola instancia (vps7) es la fuente de verdad de todo Audiocast. El traspaso está en
+> `docs/HANDOFF-2026-09-30.md`. Lo que sigue se escribió cuando la app la hacía vps4: donde dice «esta instancia» o
+> «vps4 la construye», hoy vale vps7.
+
 ## Qué es
 
 **Soporte Audiocast**: asistente telefónica (ElevenLabs Agents) + panel de casos para las tiendas que usan las cajas
