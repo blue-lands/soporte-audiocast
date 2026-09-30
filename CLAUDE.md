@@ -80,7 +80,7 @@ prueba de hrm (la 1 sin audio: la asistente no alcanzó a hablar; la 2 cortó tr
 | Número `+56225831900` (SIP trunk, solo entrantes, abierto a cualquier IP como SuperPet: decisión de hrm) | `phnum_7901m3m0hbzefj6rsvx299m8vpta` |
 | WhatsApp «Audiocast» (+56 2 2583 1900), cuenta Meta «Mediaflow» (WABA `1388001310155966`) | phone_number_id `1366498186551130` |
 
-- Voz Cristina Campos (`nTkjq09AuYgsNR8E4sDe`, `eleven_v3_conversational`), LLM `claude-haiku-4-5@20251001` a 0,3,
+- Voz Cristina Campos (`nTkjq09AuYgsNR8E4sDe`, `eleven_v3_conversational`), LLM **`claude-sonnet-4-6`** a 0,3 desde 2026-09-30 (antes `claude-haiku-4-5@20251001`, ver HANDOFF),
   `end_call` activo, `summary_language: es`, `text_only` permitido (WhatsApp). Saludo: «Aló, soporte Audiocast, ¿en qué
   le puedo ayudar?».
 - **El prompt y la ficha que valen son copias de `deploy/agente/`**: se editan ahí y se suben con `PATCH
