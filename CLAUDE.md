@@ -62,8 +62,8 @@ El 2026-09-29 22:09 (Chile) el caso 7 quedó `whatsapp_estado=enviado` y a las 2
 Lo que **no está verificado**:
 
 - Entrar al panel con una sesión real de la central (hrm no lo ha confirmado).
-- Todo lo que dice la asistente sale de la **flota de ejemplo** (`ejemplos/units-mixto.json`), no de la central. Las
-  tres cajas reales del ejemplo son inventadas, incluida `minipc-lab-01`.
+- ~~Todo lo que dice la asistente sale de la flota de ejemplo~~ — desde 2026-09-30 lee la central real (token de
+  lector); el ejemplo queda solo para los tests.
 
 En la base hay consultas de prueba (`prueba-publicacion`, `prueba-f3`) que no son casos. Casos 1 y 2 son llamadas de
 prueba de hrm (la 1 sin audio: la asistente no alcanzó a hablar; la 2 cortó tras el saludo). El 4 es un WhatsApp de hrm.
@@ -133,7 +133,8 @@ export SOPORTE_DB=/tmp/soporte.db CENTRAL_ARCHIVO=ejemplos/units-mixto.json PYTH
 .venv/bin/uvicorn --factory app.principal:crear_app --host 127.0.0.1 --port 8392
 curl -s 127.0.0.1:8392/salud
 
-python3 ejemplos/generar.py > ejemplos/units-mixto.json   # rehacer el ejemplo (no habla con la central)
+CENTRAL_DIR=/root/audiocast-player/central EJEMPLO_AHORA=1790565192.1482623 \
+    python3 ejemplos/generar.py > ejemplos/units-mixto.json   # rehacer el ejemplo (en vps7; no habla con la central)
 ```
 
 Sobre el servicio instalado, las tareas de consola van por `deploy/cli.sh` (mismo usuario y base que el servicio; si
@@ -240,20 +241,17 @@ Stack de Asiste: FastAPI + SQLite + Jinja, un servicio systemd (`deploy/soporte-
 - `app/palabras.py` — números en palabras. La asistente recibe `direccion` (escrita, para WhatsApp) y
   `direccion_para_decir` (sin cifras, para la voz) y la indicación de decirla al confirmar la tienda. El prompt de
   ElevenLabs no cambió.
-- `ejemplos/units-mixto.json` — la flota simulada en plan `mixto` (ids reales: el simulador tiene semilla fija) + 3 cajas
-  reales **inventadas** según la descripción de la guía.
+- `ejemplos/units-mixto.json` — para los tests: la flota simulada de la central en plan `mixto` (70, una por tienda,
+  con `site.tienda`) + 3 cajas con los ids de las reales y estado inventado (regenerado 2026-09-30).
 
 ## Pendiente de otros
 
-- **Token `soporte` de la central** y **rol de solo lectura**: los hace la instancia de MediaFlow (vps7) con el OK de
-  hrm. Los tokens de la central viven en `/etc/audiocast-central/tokens.json` y entran por `LoadCredential`: no leerlos.
-  Al llegar el token: `CENTRAL_TOKEN` en `.env`, vaciar `CENTRAL_ARCHIVO`, reiniciar el servicio, `cargar-tiendas` de
-  nuevo y comparar la asociación con la del ejemplo.
-- **Plan del simulador**: hoy `pausa` (todas "aún no activadas"). Para el demo, `mixto` o un plan propio. Decisión de
+- ~~Token `soporte` de la central y rol de solo lectura~~ — hechos 2026-09-30 (`readers.soporte` en
+  `/etc/audiocast-central/tokens.json`); la app ya lee la central.
+- **Plan del simulador**: `pausa` (todas "aún no activadas"); hrm decidió el 2026-09-30 dejarlo así. Antes: decisión de
   hrm; lo ejecuta la instancia de MediaFlow.
 - **Avisos por Telegram**: la guía propone el bot de alertas de la central. Su credencial está en
   `/etc/audiocast-central/telegram_bot_token`; no se leyó. Las entrega hrm (o un bot propio) y van en
   `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`.
-- **San Vicente queda sin caja**: son 71 tiendas y 70 cajas (69 simuladas + `minipc-lab-01`). hrm no ha decidido si
-  se le asigna `x98h-lab-02` (frágil).
-- **`tottus-stores.ts` de MediaFlow** tiene 5 tiendas de O'Higgins bajo "Región de Valparaíso": conviene corregirlo allá.
+- ~~San Vicente queda sin caja~~ — resuelto 2026-09-30: la central tiene una caja por tienda (70 simuladas + la piloto).
+- ~~`tottus-stores.ts` de MediaFlow con O'Higgins mal~~ — no aplicaba: ya estaban bien (cotejado 2026-09-30).
