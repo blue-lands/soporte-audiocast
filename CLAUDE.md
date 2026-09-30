@@ -32,49 +32,83 @@ Guías de origen (con credenciales; viven fuera de git, **no copiarlas aquí**):
 - Llamadas salientes, WhatsApp a personas, planes: cuestan dinero o molestan a terceros. Solo con permiso de hrm para
   esa acción concreta.
 
-## Estado de las fases
+## Estado (2026-09-28)
+
+**Funciona de punta a punta por teléfono**: se llama al **+56 2 2583 1900**, contesta la asistente, consulta el equipo de
+la tienda, el caso llega al panel con número, ficha y transcripción (primera llamada completa: caso N° 0003).
 
 | # | Qué | Estado |
 |---|---|---|
-| F1 | App base, directorio de tiendas, lectura de la central | **Hecha.** Servicio `soporte-audiocast` instalado, activo y `enabled` |
-| F2 | Herramienta `consultar_tienda` + webhook de fin (HMAC) + panel | **Hecha** y desplegada, con 156 pruebas. **Nunca ha recibido una conversación real de ElevenLabs** |
+| F1 | App base, directorio de tiendas, lectura de la central | **Hecha.** Servicio `soporte-audiocast` activo y `enabled` |
+| F2 | Herramienta `consultar_tienda` + webhook de fin (HMAC) + panel | **Hecha.** 171 pruebas |
 | F4 | Publicar en internet | **Hecha** en `https://central.mediaflow.cl/soporte/`, con enlaces en los dos sentidos con la central |
-| F3 | Agente en ElevenLabs por API | **Pendiente: espera el OK de hrm** (usa la API key compartida y consume minutos). Propuesta hecha: saludo "Aló, soporte Audiocast, ¿en qué le puedo ayudar?" y voz Cristina Campos |
-| F5 | Número Zadarma → ElevenLabs | Pendiente, después de F3. Número nuevo: **+56 2 2583 1900** (`+56225831900`). Falta que hrm confirme que está activo |
-| F6 | Ensayo del demo (3 llamadas: equipo bien, en música de respaldo, caído) | Pendiente |
+| F3 | Asistente en ElevenLabs | **Hecha** (ver «ElevenLabs, Zadarma y WhatsApp») |
+| F5 | Número Zadarma → ElevenLabs | **Hecho.** Llamadas reales funcionan |
+| F5b | WhatsApp oficial del 1900 + WhatsApp con N° de caso a quien llama | Número inscrito en Meta y atendido por la asistente. **Hecho**: el WhatsApp con N° de caso funciona desde el 2026-09-29 (caso 7) |
+| F6 | Ensayo del demo (3 llamadas: equipo bien, en música de respaldo, caído) | Pendiente. Necesita que el simulador de la central muestre problemas y el token `soporte` |
+
+**Plantilla `caso_registrado` destrabada:** el 2026-09-28 Meta la rechazaba (`#132001 ... does not exist in es`, caso 5).
+El 2026-09-29 22:09 (Chile) el caso 7 quedó `whatsapp_estado=enviado` y a las 22:10 la persona contestó por WhatsApp
+(caso 8): llegó. Pendiente solo si hrm lo quiere: `deploy/cli.sh reenviar-whatsapp 5` (manda un WhatsApp real).
 
 Lo que **no está verificado**:
 
-- Entrar al panel con una sesión real de la central: solo se probó con una central simulada y, por internet, que sin
-  sesión redirige. Se le preguntó a hrm si le abrió; no ha contestado.
-- Todo lo que dice la asistente sale hoy de la **flota de ejemplo** (`ejemplos/units-mixto.json`), no de la central.
-- Las tres cajas reales del ejemplo son inventadas, incluida `minipc-lab-01`.
+- Entrar al panel con una sesión real de la central (hrm no lo ha confirmado).
+- Todo lo que dice la asistente sale de la **flota de ejemplo** (`ejemplos/units-mixto.json`), no de la central. Las
+  tres cajas reales del ejemplo son inventadas, incluida `minipc-lab-01`.
 
-En la base real hay una consulta de prueba (`conversation_id` = `prueba-publicacion`); no aparece como caso.
+En la base hay consultas de prueba (`prueba-publicacion`, `prueba-f3`) que no son casos. Casos 1 y 2 son llamadas de
+prueba de hrm (la 1 sin audio: la asistente no alcanzó a hablar; la 2 cortó tras el saludo). El 4 es un WhatsApp de hrm.
+
+## ElevenLabs, Zadarma y WhatsApp
+
+**ElevenLabs** (API key compartida de la guía §3, también en `.env` como `ELEVENLABS_API_KEY`):
+
+| Qué | Id |
+|---|---|
+| Asistente «Soporte Audiocast (Tóttus demo)» | `agent_0501m3m03g3xesfrmyy837j70q5a` |
+| Herramienta `consultar_tienda` (webhook con `X-Soporte-Token`) | `tool_7801m3m02gw7e8tv98pmhh87jswa` |
+| Webhook de fin «Soporte Audiocast (panel)», HMAC | `3f87fc5a1ca6414b8dfdf520b46146fe` (secreto en `.env`) |
+| Número `+56225831900` (SIP trunk, solo entrantes, abierto a cualquier IP como SuperPet: decisión de hrm) | `phnum_7901m3m0hbzefj6rsvx299m8vpta` |
+| WhatsApp «Audiocast» (+56 2 2583 1900), cuenta Meta «Mediaflow» (WABA `1388001310155966`) | phone_number_id `1366498186551130` |
+
+- Voz Cristina Campos (`nTkjq09AuYgsNR8E4sDe`, `eleven_v3_conversational`), LLM `claude-haiku-4-5@20251001` a 0,3,
+  `end_call` activo, `summary_language: es`, `text_only` permitido (WhatsApp). Saludo: «Aló, soporte Audiocast, ¿en qué
+  le puedo ayudar?».
+- **El prompt y la ficha que valen son copias de `deploy/agente/`**: se editan ahí y se suben con `PATCH
+  /v1/convai/agents/{id}` mandando `prompt`, `llm`, `temperature`, `tool_ids` y `built_in_tools.end_call` juntos; después
+  leer el agente y comprobar prompt, herramienta, `end_call`, 9 campos de ficha y el webhook.
+- **Trampas**: un PATCH a `workspace_overrides` reemplaza el bloque entero. Si hrm publica algo en el dashboard, revisar
+  por API que sigan prompt, ficha y webhook. **La asistente no debe leer números**: dijo «empieza con nueve seis» de un
+  celular que empieza con 99 (Haiku inventa dígitos); el prompt se lo prohíbe.
+- No tocar nada de SuperPet (`agent_8001m3bb6yy8e78s86c6yeda765a`, 7395, webhook `b563…`).
+
+**Zadarma** (centralita `591475`; la API se usó con una clave que hrm dio en el chat, **no guardada**):
+
+| Extensión | Qué hace | Número |
+|---|---|---|
+| 100 | desvío a Retell | 7279 (regla general, suena con la 102) |
+| 101 | desvío a ElevenLabs SuperPet | 7395 (regla «ElevenLabs 7395») |
+| 102 | sin desvío; suena en la regla general del 7279 | — |
+| **103** | **desvío siempre a `+56225831900@sip.rtc.elevenlabs.io`** | **1900** (regla «Soporte Audiocast 1900», solo la 103) |
+
+- La 103 la creó hrm en la web (crear extensiones por API lo frenó el control de permisos por posible costo). También
+  está en la app de Zadarma de su celular: con el desvío encendido no le suena; apagándolo (API `POST
+  /v1/pbx/redirection/` `status=off`) le suena a él (así se verificó el número en Meta).
+- La API de Zadarma no muestra qué número activa cada regla.
+
+**WhatsApp con N° de caso** (`app/whatsapp.py`): plantilla `caso_registrado` (Utilidad, `es`, 4 variables en orden:
+nombre, N° de caso, tienda, problema) por `POST /v1/convai/whatsapp/outbound-message`, desde el WhatsApp «Audiocast».
+Si la persona contesta, la atiende la asistente y queda como caso de canal `whatsapp`.
 
 ## Próximos pasos
 
-**F3, cuando hrm dé el OK** (referencia: guía §6 y §7; leer el agente de SuperPet por API y copiar lo que sirva, sin
-modificarlo):
-
-1. Crear el webhook de fin en ElevenLabs (tipo HMAC) hacia `…/soporte/webhooks/elevenlabs`. Entrega el secreto: va en
-   `ELEVENLABS_WEBHOOK_SECRET` del `.env` y hay que reiniciar el servicio.
-2. Crear el agente: idioma `es`, LLM `claude-haiku-4-5`, voz Cristina Campos, `end_call` activado (por API no viene
-   activo), `summary_language: es`, ficha de la guía §0.4 y la herramienta `consultar_tienda` con `X-Soporte-Token`.
-   En el cuerpo de la herramienta: `tienda` y `tienda_id` los llena el modelo; `conversation_id` va atado a la variable
-   `system__conversation_id`.
-3. El prompt: tratar de usted, preguntar tienda y nombre, **confirmar la tienda antes de decir el estado**, decir el
-   estado con las palabras que entrega la herramienta, "Tóttus" con tilde, no prometer lo que no existe.
-4. Probar desde el navegador de ElevenLabs y revisar que el caso llegue al panel con tienda, ficha y transcripción.
-5. **Trampa**: un PATCH a `workspace_overrides` reemplaza el bloque entero. Después de que hrm publique algo en el
-   dashboard de ElevenLabs, revisar por API que sigan el prompt, la ficha y el webhook.
-
-**F5**: hrm, en Zadarma, crea una extensión nueva con su propio flujo (sin menú ni buzón de voz) y le deja el desvío
-siempre activo a `+56225831900@sip.rtc.elevenlabs.io`. Claude importa el número en ElevenLabs (SIP trunk) y le asigna
-el agente. WhatsApp queda fuera del demo.
+1. Pedir a hrm que confirme que el panel le abre desde la central.
+2. Para el demo: token `soporte` de la central y un plan del simulador con problemas (los hace la instancia de
+   MediaFlow). Luego ensayo con 3 llamadas.
 
 **Después del demo**: ficha por sucursal (estado del equipo ahora + historial de conversaciones + enlace a su caja en
-la central), cuentas por persona con registro de quién vio qué (Ley 21.719, rige desde el 1-dic-2026), WhatsApp.
+la central), cuentas por persona con registro de quién vio qué (Ley 21.719, rige desde el 1-dic-2026).
 
 ## Comandos
 
@@ -100,10 +134,15 @@ root escribe en la base, el servicio después no puede):
 ```bash
 deploy/cli.sh cargar-tiendas
 deploy/cli.sh consultar "la de nataniel"
+deploy/cli.sh reenviar-whatsapp 5            # vuelve a mandar el WhatsApp del caso N° 0005 si falló (manda un WhatsApp real)
 
-systemctl restart soporte-audiocast      # tras cambiar código o .env. Pedir confirmación a hrm
+systemctl restart soporte-audiocast      # tras cambiar código o .env. Ver abajo: lo corre hrm
 journalctl -u soporte-audiocast
 ```
+
+**Reinicios**: el control de permisos no deja a Claude reiniciar el servicio. Se le pide a hrm que escriba
+`! systemctl restart soporte-audiocast` con el `!` como **primer carácter** (con espacios antes no corre) y luego se
+verifica con `/salud`. `deploy/cli.sh` sí funciona (probado el 2026-09-28).
 
 **Detener servidores de prueba por PID exacto, nunca por patrón**: Asiste corre con la misma línea de comando
 (`uvicorn --factory app.principal:crear_app`, puerto 8391) y es producción.
@@ -132,8 +171,8 @@ la central y entra quien ya tiene sesión abierta ahí.
 | Qué | Dirección |
 |---|---|
 | Panel | `https://central.mediaflow.cl/soporte/` |
-| Herramienta (para F3) | `POST https://central.mediaflow.cl/soporte/herramientas/consultar_tienda` |
-| Webhook de fin (para F3) | `POST https://central.mediaflow.cl/soporte/webhooks/elevenlabs` |
+| Herramienta | `POST https://central.mediaflow.cl/soporte/herramientas/consultar_tienda` |
+| Webhook de fin | `POST https://central.mediaflow.cl/soporte/webhooks/elevenlabs` |
 
 - nginx: el sitio `central.mediaflow.cl` incluye `/etc/nginx/snippets/soporte-audiocast.conf` (copia en
   `deploy/nginx-snippet-soporte-audiocast.conf`). **nginx quita el prefijo** (`/soporte/casos/x` llega como `/casos/x`) y
@@ -165,22 +204,34 @@ Stack de Asiste: FastAPI + SQLite + Jinja, un servicio systemd (`deploy/soporte-
 - `app/principal.py` — las rutas:
   - `POST /herramientas/consultar_tienda` — encabezado `X-Soporte-Token` (o `Authorization: Bearer`). Cuerpo:
     `tienda` (lo que dijo la persona), `tienda_id` (solo en la segunda vuelta, cuando ya eligió entre varias opciones) y
-    `conversation_id` (en F3 se llena con la variable `system__conversation_id`; también vale `X-Conversation-Id`).
+    `conversation_id` (ElevenLabs lo llena con la variable `system__conversation_id`; también vale `X-Conversation-Id`).
     Cada consulta queda en la tabla `consultas` con la caja cruda.
   - `POST /webhooks/elevenlabs` — firma HMAC sobre el **cuerpo crudo**. Solo guarda `post_call_transcription`.
-    Idempotente por `conversation_id`. Sin secreto configurado responde 503.
+    Idempotente por `conversation_id`. Sin secreto configurado responde 503. Tras guardar, en segundo plano: aviso por
+    Telegram y WhatsApp a quien llamó.
   - Panel: `/` (casos) y `/casos/<id>`, con la sesión de la central. `/salud` es abierto y solo da cuentas.
-- `app/casos.py` — la tienda de un caso es **la que consultó la asistente**; si no consultó, la que se entienda de la
+- `app/casos.py` — cada caso recibe un **número correlativo** (`numero`, N° 0005) al llegar; un reintento no lo cambia
+  (los casos anteriores lo recibieron en `db._migrar`, por orden de `inicio`). La tienda de un caso es **la que consultó la asistente**; si no consultó, la que se entienda de la
   ficha (y si es dudosa, queda sin tienda). Un caso es urgente si lo dice la ficha **o** si el equipo estaba en un
   estado urgente al consultarlo.
 - `app/elevenlabs.py` — firma y traducción de la conversación a un caso. Las pruebas del navegador de ElevenLabs quedan
   como canal `prueba` y **sí** son casos (en el demo sin número, son los casos).
+- `app/whatsapp.py` — WhatsApp a quien llamó con el N° de caso. Solo llamadas desde un celular chileno (`569…`) en que
+  la persona habló y el problema no se resolvió. Una sola vez por caso (`whatsapp_estado`: enviando → enviado / omitido /
+  error, con el motivo en `whatsapp_detalle`); el panel lo muestra. Un error no se reintenta solo:
+  `deploy/cli.sh reenviar-whatsapp <N°>`. Una conversación de WhatsApp sin nada de la persona (la plantilla que nadie
+  contestó) no se guarda como caso.
 - `app/avisos.py` — Telegram para casos urgentes, una vez por caso. Apagado mientras `TELEGRAM_*` esté vacío.
 - `app/seguridad.py` — comparación de tokens en tiempo constante. No hay usuarios ni claves.
 - Panel: `app/plantillas/` + `app/estaticos/estilo.css`, con los tokens de `DESIGN.md` de Audiocast (tema oscuro único,
   px fijos). CSP sin scripts: el panel no usa JavaScript.
 - `app/datos/tottus_tiendas.py` — las 71 tiendas. Difiere de la fuente en una cosa: 5 tiendas de O'Higgins venían bajo
-  "Región de Valparaíso".
+  "Región de Valparaíso". `DIRECCIONES`: calle y número de tottus.cl (lista de hrm, 2026-09-30), 69 de 71: Piedra Roja
+  y El Bosque venían malas en la fuente. La central no sirve para cotejarlas: sus cajas reales no mandan dirección y las
+  simuladas la inventan.
+- `app/palabras.py` — números en palabras. La asistente recibe `direccion` (escrita, para WhatsApp) y
+  `direccion_para_decir` (sin cifras, para la voz) y la indicación de decirla al confirmar la tienda. El prompt de
+  ElevenLabs no cambió.
 - `ejemplos/units-mixto.json` — la flota simulada en plan `mixto` (ids reales: el simulador tiene semilla fija) + 3 cajas
   reales **inventadas** según la descripción de la guía.
 
