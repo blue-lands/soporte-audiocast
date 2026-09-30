@@ -3,6 +3,7 @@
     .venv/bin/python -m app.cli cargar-tiendas [--cajas ejemplos/units-mixto.json]
     .venv/bin/python -m app.cli tiendas
     .venv/bin/python -m app.cli consultar "la de nataniel"
+    .venv/bin/python -m app.cli reenviar-whatsapp 5     # el WhatsApp del caso N° 0005, si falló
 
 Leen la misma configuración que el servicio (variables de entorno; ver .env.ejemplo).
 """
@@ -12,7 +13,7 @@ import dataclasses
 import json
 import sys
 
-from . import central, consulta, db, directorio
+from . import central, consulta, db, directorio, whatsapp
 from .config import cargar
 
 
@@ -24,6 +25,8 @@ def main(argv: list[str] | None = None) -> int:
     tareas.add_parser("tiendas", help="lista el directorio")
     consultar = tareas.add_parser("consultar", help="lo que respondería la herramienta consultar_tienda")
     consultar.add_argument("texto")
+    reenviar = tareas.add_parser("reenviar-whatsapp", help="vuelve a mandar el WhatsApp de un caso que falló")
+    reenviar.add_argument("numero", type=int, help="N° del caso")
     args = parser.parse_args(argv)
 
     config = cargar()
@@ -37,6 +40,10 @@ def main(argv: list[str] | None = None) -> int:
         if args.tarea == "tiendas":
             _listar(directorio.todas(con))
             return 0
+        if args.tarea == "reenviar-whatsapp":
+            resultado = whatsapp.reintentar(config, con, args.numero)
+            print(f"Caso N° {args.numero:04d}: {resultado}")
+            return 0 if resultado == "enviado" else 1
         print(json.dumps(consulta.consultar_tienda(con, config, args.texto), ensure_ascii=False, indent=2))
         return 0
     finally:

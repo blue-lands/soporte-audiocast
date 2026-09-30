@@ -3,7 +3,7 @@
 #   deploy/cli.sh cargar-tiendas
 #   deploy/cli.sh consultar "la de nataniel"
 # Hace falta porque la base vive en el StateDirectory de un DynamicUser: si root escribe ahí, el servicio
-# después no puede. SIN PROBAR hasta que el servicio esté instalado.
+# después no puede. Probado el 2026-09-28 (reenviar-whatsapp).
 set -euo pipefail
 exec systemd-run --quiet --pipe --wait --collect \
     -p DynamicUser=yes -p User=soporte-audiocast \

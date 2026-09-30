@@ -51,6 +51,12 @@ CREATE TABLE IF NOT EXISTS casos (
     transcripcion       TEXT NOT NULL,   -- JSON: [{"rol": "asistente"|"persona", "mensaje": …, "segundo": …}]
     costo               TEXT,
     recibido            INTEGER NOT NULL,
-    avisado             INTEGER NOT NULL DEFAULT 0   -- ya se mandó el aviso de caso urgente
+    avisado             INTEGER NOT NULL DEFAULT 0,  -- ya se mandó el aviso de caso urgente
+    -- Número del caso para la persona (N° 0003): correlativo, se asigna al llegar. Índice único en db._migrar.
+    numero              INTEGER,
+    -- WhatsApp a quien llamó (app/whatsapp.py). NULL = no se ha procesado.
+    whatsapp_estado     TEXT,            -- 'enviando' | 'enviado' | 'omitido' | 'error'
+    whatsapp_detalle    TEXT,            -- por qué se omitió o qué error hubo; nunca la clave
+    whatsapp_momento    INTEGER
 );
 CREATE INDEX IF NOT EXISTS casos_inicio ON casos (inicio DESC);

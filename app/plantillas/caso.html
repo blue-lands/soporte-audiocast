@@ -4,7 +4,8 @@
 <p class="volver"><a href="{{ base }}/">← Casos</a></p>
 
 <div class="cabecera cabecera-caso">
-  <h1>{{ caso.tienda_nombre or caso.tienda or "Tienda sin identificar" }}</h1>
+  <h1>{{ caso.tienda_nombre or caso.tienda or "Tienda sin identificar" }}
+    {% if caso.numero %}<span class="dato secundario">{{ caso.numero | numero_caso }}</span>{% endif %}</h1>
   <p class="secundario">
     {% if caso.tienda_comuna %}{{ caso.tienda_comuna }}, {{ caso.tienda_region }} · {% endif %}
     {{ caso.inicio | fecha_hora }} · {{ caso.canal | canal }} · {{ caso.duracion_s | duracion }}
@@ -28,6 +29,7 @@
       <dt>Quién llamó</dt><dd>{{ caso.nombre_contacto or "—" }}</dd>
       <dt>Tienda que dijo</dt><dd>{{ caso.tienda or "—" }}</dd>
       {% if caso.telefono %}<dt>Teléfono</dt><dd class="dato">{{ caso.telefono }}</dd>{% endif %}
+      {% if caso.canal == "llamada" %}<dt>WhatsApp con el N° de caso</dt><dd>{{ caso | whatsapp }}</dd>{% endif %}
       <dt>Urgente</dt><dd>{{ caso.urgencia | si_no }}</dd>
       <dt>Resuelto en la llamada</dt><dd>{{ caso.resuelto_en_llamada | si_no }}</dd>
       <dt>Requiere técnico</dt><dd>{{ caso.requiere_tecnico | si_no }}</dd>

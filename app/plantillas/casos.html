@@ -20,6 +20,7 @@
     <a class="caso-enlace" href="{{ base }}/casos/{{ caso.conversation_id }}">
       <div class="caso-cuando">
         <span class="dato">{{ caso.inicio | fecha_hora }}</span>
+        {% if caso.numero %}<span class="dato secundario">{{ caso.numero | numero_caso }}</span>{% endif %}
         <span class="secundario">{{ caso.canal | canal }}</span>
       </div>
       <div class="caso-que">

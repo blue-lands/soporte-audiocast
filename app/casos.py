@@ -53,12 +53,34 @@ def guardar(con: sqlite3.Connection, caso: dict) -> bool:
         caso["tienda_id"] = tienda.id if tienda else None
     with transaccion(con):
         nuevo = con.execute("SELECT 1 FROM casos WHERE conversation_id = ?", (caso["conversation_id"],)).fetchone() is None
+        # El número se asigna una sola vez: un reintento de ElevenLabs no lo cambia.
+        caso["numero"] = con.execute("SELECT COALESCE(MAX(numero), 0) + 1 FROM casos").fetchone()[0]
+        columnas = _COLUMNAS + ("numero",)
         con.execute(
-            f"INSERT INTO casos ({', '.join(_COLUMNAS)}) VALUES ({', '.join('?' * len(_COLUMNAS))}) "
+            f"INSERT INTO casos ({', '.join(columnas)}) VALUES ({', '.join('?' * len(columnas))}) "
             "ON CONFLICT (conversation_id) DO UPDATE SET "
             + ", ".join(f"{c} = excluded.{c}" for c in _COLUMNAS if c not in ("conversation_id", "recibido")),
-            [caso.get(columna) for columna in _COLUMNAS])
+            [caso.get(columna) for columna in columnas])
     return nuevo
+
+
+def hablo_la_persona(caso: dict) -> bool:
+    """Si la persona dijo o escribió algo. Un corte antes de hablar, o la plantilla de WhatsApp sin respuesta, no."""
+    return any(turno.get("rol") == "persona" for turno in json.loads(caso.get("transcripcion") or "[]"))
+
+
+def marcar_whatsapp(con: sqlite3.Connection, conversation_id: str, estado: str | None, detalle: str | None = None,
+                    *, solo_si_estaba: str | None = None, momento: int | None = None) -> bool:
+    """Anota el WhatsApp del caso. Con `solo_si_estaba=''`, solo si nunca se procesó: así se envía una sola vez."""
+    condicion, valores = "", []
+    if solo_si_estaba == "":
+        condicion = " AND whatsapp_estado IS NULL"
+    elif solo_si_estaba is not None:
+        condicion, valores = " AND whatsapp_estado = ?", [solo_si_estaba]
+    return con.execute(
+        f"UPDATE casos SET whatsapp_estado = ?, whatsapp_detalle = ?, whatsapp_momento = ? "
+        f"WHERE conversation_id = ?{condicion}",
+        [estado, detalle, int(time.time()) if momento is None else momento, conversation_id, *valores]).rowcount == 1
 
 
 _SELECT = """

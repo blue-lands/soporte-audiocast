@@ -30,6 +30,12 @@ class Config:
     herramienta_token: str = ""
     # Secreto HMAC del webhook de fin de conversación (lo entrega ElevenLabs al crear el webhook). Vacío: responde 503.
     elevenlabs_webhook_secret: str = ""
+    # WhatsApp a quien llamó, con el número de su caso (app/whatsapp.py). Sale del WhatsApp oficial de Audiocast por
+    # ElevenLabs con una plantilla aprobada por Meta. Sin clave o sin número no se envía nada.
+    elevenlabs_api_key: str = ""
+    whatsapp_numero_id: str = ""     # phone_number_id de Meta del número que envía
+    whatsapp_plantilla: str = "caso_registrado"
+    whatsapp_idioma: str = "es"
     # Aviso a hrm cuando llega un caso urgente. Sin token o sin chat no se envía nada.
     telegram_bot_token: str = ""
     telegram_chat_id: str = ""
@@ -62,6 +68,10 @@ def cargar() -> Config:
         central_panel=os.environ.get("CENTRAL_PANEL", "/").strip() or "/",
         herramienta_token=os.environ.get("SOPORTE_HERRAMIENTA_TOKEN", "").strip(),
         elevenlabs_webhook_secret=os.environ.get("ELEVENLABS_WEBHOOK_SECRET", "").strip(),
+        elevenlabs_api_key=os.environ.get("ELEVENLABS_API_KEY", "").strip(),
+        whatsapp_numero_id=os.environ.get("WHATSAPP_NUMERO_ID", "").strip(),
+        whatsapp_plantilla=os.environ.get("WHATSAPP_PLANTILLA", "caso_registrado").strip(),
+        whatsapp_idioma=os.environ.get("WHATSAPP_IDIOMA", "es").strip(),
         telegram_bot_token=os.environ.get("TELEGRAM_BOT_TOKEN", "").strip(),
         telegram_chat_id=os.environ.get("TELEGRAM_CHAT_ID", "").strip(),
         base_url=os.environ.get("SOPORTE_BASE_URL", "").strip().rstrip("/"),

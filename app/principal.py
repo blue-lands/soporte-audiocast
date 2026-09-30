@@ -18,7 +18,7 @@ from starlette.concurrency import run_in_threadpool
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
-from . import avisos, casos, central, consulta, db, directorio, elevenlabs, formato, seguridad
+from . import avisos, casos, central, consulta, db, directorio, elevenlabs, formato, seguridad, whatsapp
 from .config import Config, cargar
 
 _CARPETA = Path(__file__).parent
@@ -27,7 +27,7 @@ _plantillas = jinja2.Environment(loader=jinja2.FileSystemLoader(_CARPETA / "plan
 _plantillas.filters.update(
     fecha_hora=formato.fecha_hora, hora=formato.hora, duracion=formato.duracion, minuto=formato.minuto,
     problema=formato.problema, canal=formato.canal, si_no=formato.si_no, turnos=formato.turnos,
-    json_legible=formato.json_legible,
+    json_legible=formato.json_legible, numero_caso=formato.numero_caso, whatsapp=formato.whatsapp,
 )
 
 # El panel no tiene formularios ni JavaScript.
@@ -87,8 +87,18 @@ def _avisar_si_es_urgente(config: Config, conversation_id: str, enviar) -> None:
         con.close()
 
 
-def crear_app(config: Config | None = None, *, transporte_central=None, enviar_aviso=None) -> FastAPI:
-    """`transporte_central` y `enviar_aviso` permiten a las pruebas reemplazar la central y Telegram."""
+def _whatsapp_a_quien_llamo(config: Config, conversation_id: str, transporte) -> None:
+    con = db.conectar(config.db_path)
+    try:
+        whatsapp.procesar(config, con, conversation_id, transporte=transporte)
+    finally:
+        con.close()
+
+
+def crear_app(config: Config | None = None, *, transporte_central=None, enviar_aviso=None,
+              transporte_whatsapp=None) -> FastAPI:
+    """`transporte_central`, `enviar_aviso` y `transporte_whatsapp` permiten a las pruebas reemplazar la central,
+    Telegram y ElevenLabs."""
     config = config or cargar()
     enviar_aviso = enviar_aviso or avisos.enviar
     # nginx le quita el prefijo a lo que entra (/soporte/casos/x llega como /casos/x); lo que sale lo lleva puesto.
@@ -239,9 +249,11 @@ def crear_app(config: Config | None = None, *, transporte_central=None, enviar_a
                     if evento["type"] == elevenlabs.EVENTO_GUARDADO else None)
         except (ValueError, KeyError, TypeError, AttributeError):
             return Response(status_code=400)
-        if caso is not None:
+        # Un WhatsApp sin nada de la persona es la plantilla del caso que nadie contestó: no es un caso nuevo.
+        if caso is not None and not (caso["canal"] == "whatsapp" and not casos.hablo_la_persona(caso)):
             await run_in_threadpool(_guardar_caso, config, caso)
             tareas.add_task(_avisar_si_es_urgente, config, caso["conversation_id"], enviar_aviso)
+            tareas.add_task(_whatsapp_a_quien_llamo, config, caso["conversation_id"], transporte_whatsapp)
         return Response(status_code=204)
 
     # --- Panel: casos. Solo lectura. ---

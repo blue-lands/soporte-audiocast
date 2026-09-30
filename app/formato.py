@@ -60,6 +60,24 @@ def canal(valor: str | None) -> str:
     return CANALES.get(valor or "", valor or "—")
 
 
+def numero_caso(valor: int | None) -> str:
+    return f"N° {valor:04d}" if valor else ""
+
+
+_WHATSAPP = {"enviado": "Enviado", "omitido": "No enviado", "error": "Error al enviar", "enviando": "Enviando…"}
+
+
+def whatsapp(caso) -> str:
+    """'Enviado 12:41' · 'No enviado: No llamó desde un celular.' · '—' si no se procesó."""
+    estado = caso["whatsapp_estado"]
+    if not estado:
+        return "—"
+    texto = _WHATSAPP.get(estado, estado)
+    if estado == "enviado" and caso["whatsapp_momento"]:
+        return f"{texto} {hora(caso['whatsapp_momento'])}"
+    return f"{texto}: {caso['whatsapp_detalle']}" if caso["whatsapp_detalle"] else texto
+
+
 def si_no(valor) -> str:
     return "—" if valor is None else "Sí" if valor else "No"
 

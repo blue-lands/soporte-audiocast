@@ -31,6 +31,17 @@ def _migrar(con: sqlite3.Connection) -> None:
     # 2026-09-28: el panel tuvo entrada propia unas horas. Ahora vale la sesión de la central.
     for tabla in ("sesiones", "intentos_fallidos", "usuarios"):
         con.execute(f"DROP TABLE IF EXISTS {tabla}")
+    # 2026-09-28: número de caso y WhatsApp a quien llamó.
+    columnas = {fila["name"] for fila in con.execute("PRAGMA table_info(casos)")}
+    for columna, tipo in (("numero", "INTEGER"), ("whatsapp_estado", "TEXT"), ("whatsapp_detalle", "TEXT"),
+                          ("whatsapp_momento", "INTEGER")):
+        if columna not in columnas:
+            con.execute(f"ALTER TABLE casos ADD COLUMN {columna} {tipo}")
+    # Los casos que llegaron antes del número lo reciben en el orden en que ocurrieron.
+    for fila in con.execute("SELECT conversation_id FROM casos WHERE numero IS NULL ORDER BY inicio, recibido").fetchall():
+        con.execute("UPDATE casos SET numero = (SELECT COALESCE(MAX(numero), 0) + 1 FROM casos) WHERE conversation_id = ?",
+                    (fila["conversation_id"],))
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS casos_numero ON casos (numero)")
 
 
 @contextmanager
